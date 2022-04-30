@@ -18,7 +18,8 @@ Change how the maps are picked with the cvar (`mcu_vote_mode`)
 - Easily see config information about a map `!showmapconfig <map>`
 - Reload the maplist with a command `!reloadmaplist`
 - Admins can insert maps so they will be in the vote with `!adminnom`
-- AdminOnly maps with 1 vote or more can be nominated by any players, only an admin can make the first vote though
+- AdminOnly maps with 1 vote or more can be nominated by any players  
+Only an admin can make the first vote though
 - Set a random next map with `!setnextmap _random`
 
 ### Nominations
