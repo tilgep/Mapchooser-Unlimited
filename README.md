@@ -1,5 +1,8 @@
 # Mapchooser Unlimited
-Another Mapchooser alternative with changes to nominating and other QoL features
+Another Mapchooser alternative with changes to nominating and other QoL features  
+  
+- Changes based on a version for GFL:ZE ([Vauff](https://github.com/Vauff/) and/or [Snowy](https://github.com/SnowyGFL))
+- Based from [mapchooser_extended](https://forums.alliedmods.net/showthread.php?t=156974) by Powerlord and Alliedmodders
 
 ## Important
 - This has only been tested on CSGO and there are no plans to support anything else  
