@@ -16,11 +16,12 @@ Change how the maps are picked with the cvar (`mcu_vote_mode`)
 - Configure restrictions for each map `(see example config below)`
 - Create groups of maps to have a shared cooldown or maximum in the vote  
 - Easily see config information about a map `!showmapconfig <map>`
-- Reload the maplist with a command `!reloadmaplist`
-- Admins can insert maps so they will be in the vote with `!adminnom`
+- Reload the config file with a command `!reloadmapconfig`  
+- Reload the maplist with a command `!reloadmaplist`  
+- Admins can insert maps so they will be in the vote with `!adminnom`  
 - AdminOnly maps with 1 vote or more can be nominated by any players  
-Only an admin can make the first vote though
-- Set a random next map with `!setnextmap _random`
+Only an admin can make the first vote though  
+- Set a random next map with `!setnextmap _random`  
 
 ### Nominations
 - See the list of players who have voted for a map with `!nomlist`  
