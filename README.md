@@ -8,6 +8,7 @@ Another Mapchooser alternative with changes to nominating and other QoL features
 - This has only been tested on CSGO and there are no plans to support anything else  
 - To allow per-client vote menu shuffling, you must compile with **Sourcemod 1.11 or later**  
 And any servers you use this on must use **1.11 or later.**  
+It will work with 1.10 if you disable this feature  
 
 ## Features
 ### Mapchooser
@@ -62,7 +63,7 @@ Here is an example config with all the options you can use
     
     "de_dust2"  // Name of map
     {
-        "Extends"       "3"             // Maximum number of extends which will appear in the vote
+        "Extends"       "3"             // Maximum number of extends which will appear in the vote while playing this map
         "Cooldown"      "20"            // When this map is played it will be put on a 20 map cooldown
         "MinPlayers"    "9"             // This map needs more than 9 players to appear in the map vote or be nominated
         "MaxPlayers"    "12"            // This map needs less than 12 players to appear in the map vote or be nominated
