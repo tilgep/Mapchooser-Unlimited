@@ -43,7 +43,10 @@ Only an admin can make the first vote though
 ## Example Config
 Here is an example config with all the options you can use  
 `configs/mapchooser_unlimited.cfg`  
-**Note:** Replacing `_unlimited` with `_extended` is supported
+**Note:** Replacing `_unlimited` with `_extended` is supported  
+
+- Some options have default values found in the cvars  
+- Not all of the options need to be filled for every map, only the ones you need
 
 
 ```
@@ -67,10 +70,10 @@ Here is an example config with all the options you can use
         "Cooldown"      "20"            // When this map is played it will be put on a 20 map cooldown
         "MinPlayers"    "9"             // This map needs more than 9 players to appear in the map vote or be nominated
         "MaxPlayers"    "12"            // This map needs less than 12 players to appear in the map vote or be nominated
-        "MinTime"       "0900"          // This map can only appear in the vote or be nominated after 09:00 server time
-        "MaxTime"       "1530"          // This map can only appear in the vote or be nominated before 15:30 server time
-        "AdminOnly"     "1"             // This map can only be nominated by admins
-        "NominateOnly"  "0"             // This map can appear randomly in the vote
+        "MinTime"       "0900"          // Can only appear in the vote or be nominated after 09:00 server time (0000 - 2359)
+        "MaxTime"       "1530"          // Can only appear in the vote or be nominated before 15:30 server time (0000 - 2359)
+        "AdminOnly"     "1"             // Can only be nominated by admins (0/1) (Default: ADMFLAG_BAN, override sm_adminnom to change)
+        "NominateOnly"  "0"             // Can appear randomly in the vote (0/1)
         "Description"   "Classic map"   // This description will appear on the nominating menu and vote menu
     }
 }
