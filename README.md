@@ -2,13 +2,17 @@
 Another Mapchooser alternative with changes to nominating and other QoL features  
   
 - Changes based on a version for GFL:ZE ([Vauff](https://github.com/Vauff/) and/or [Snowy](https://github.com/SnowyGFL))
-- Based from [mapchooser_extended](https://forums.alliedmods.net/showthread.php?t=156974) by Powerlord and Alliedmodders
+- Based on [mapchooser_extended](https://forums.alliedmods.net/showthread.php?t=156974) by Powerlord and Alliedmodders
+  
+ **Thanks to Detroid and Koen for testing**
 
 ## Important
 - This has only been tested on CSGO and there are no plans to support anything else  
 - To allow per-client vote menu shuffling, you must compile with **Sourcemod 1.11 or later**  
 And any servers you use this on must use **1.11 or later.**  
 It will work with 1.10 if you disable this feature  
+- For RTV to work, you must change it to use the `mapchooser_unlimited` include file  
+- The directory for maps on cooldown may need to be created if it seems to not save after a server restart
 
 ## Features
 ### Mapchooser
@@ -37,8 +41,7 @@ Only an admin can make the first vote though
 - Easily configure any message using translation files with documentation of format parameters  
 - Extensive documentation of all natives and forwards  
 - Singular include and translation files for easy navigation  
-- Logging of all actions for easy administration  
-- The included `rockthevote_unlimited.sp` supports `!unrtv`  
+- Logging of all actions for easy administration    
 
 ## Example Config
 Here is an example config with all the options you can use  
