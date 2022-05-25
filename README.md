@@ -11,7 +11,7 @@ Another Mapchooser alternative with changes to nominating and other QoL features
 - To allow per-client vote menu shuffling, you must compile with **Sourcemod 1.11 or later**  
 And any servers you use this on must use **1.11 or later.**  
 It will work with 1.10 if you disable this feature  
-- For RTV to work, you must change it to use the `mapchooser_unlimited` include file  
+- For RTV to work, you must change RTV to use the `mapchooser_unlimited` include file  
 - The directory for maps on cooldown may need to be created if it seems to not save after a server restart
 
 ## Features
@@ -55,9 +55,9 @@ Here is an example config with all the options you can use
 ```
 "mapchooser_unlimited"
 {
-    "Groups" // Start of groups
+    "Groups" // Start of groups - Don't change this
     {
-        "Group name"
+        "Group name" // Can be changed
         {
             "Cooldown"    "10"  // All maps in the group will be put on 10 cooldown when any of them is played
             "Max"         "2"   // Only 2 of these maps will appear in the map vote
@@ -67,9 +67,11 @@ Here is an example config with all the options you can use
         }
     }
     
+    // Individual map configs
+    
     "de_dust2"  // Name of map
     {
-        "Extends"       "3"             // Maximum number of extends which will appear in the vote while playing this map
+        "Extends"       "3"             // Maximum number of times this map can be extended from the map vote
         "Cooldown"      "20"            // When this map is played it will be put on a 20 map cooldown
         "MinPlayers"    "9"             // This map needs more than 9 players to appear in the map vote or be nominated
         "MaxPlayers"    "12"            // This map needs less than 12 players to appear in the map vote or be nominated
