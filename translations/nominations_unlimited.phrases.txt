@@ -1,0 +1,527 @@
+"Phrases"
+{
+	"NPrefix"
+	{
+		"en"		"{green}[NU]{default}"
+	}
+
+	"Player Nominated"
+	{
+		// 1: Name of player
+		// 2: Name of map
+		"#format"	"{1:N},{2:s}"
+		"en"		"{lightgreen}{1}{default} has nominated {green}{2}"
+	}
+
+	"Player Nominated Replaced"
+	{
+		// 1: Name of player
+		// 2: Name of map
+		"#format"	"{1:N},{2:s}"
+		"en"		"{lightgreen}{1}{default} has changed their nomination to {green}{2}"
+	}
+
+	"Player Nominated Single"
+	{
+		// 1: Name of player
+		// 2: Name of map
+		"#format"	"{1:N},{2:s}"
+		"en"		"{lightgreen}{1}{default} has nominated {green}{2}{default} [1 vote]"
+	}
+
+	"Player Nominated Multiple"
+	{
+		// 1: Name of player
+		// 2: Name of map
+		// 3: Number of votes
+		"#format"	"{1:N},{2:s},{3:d}"
+		"en"		"{lightgreen}{1}{default} has nominated {green} {2}{default} [{3} votes]"
+	}
+
+	"Player Nominated Single Replaced"
+	{
+		// 1: Name of player
+		// 2: Name of map
+		"#format"	"{1:N},{2:s}"
+		"en"		"{lightgreen}{1}{default} has changed their nomination to {green}{2}{default} [1 vote]"
+	}
+
+	"Player Nominated Multiple Replaced"
+	{
+		// 1: Name of player
+		// 2: Name of map
+		// 3: Number of votes
+		"#format"	"{1:N},{2:s},{3:d}"
+		"en"		"{lightgreen}{1}{default} has changed their nomination to {green}{2}{default} [{3} votes]"
+	}
+
+	"Client Nominated Single"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"You nominated {green}{1}{default} [1 vote]"
+	}
+
+	"Client Nominated Multiple"
+	{
+		// 1: Name of map
+		// 2: Number of votes
+		"#format"	"{1:s},{2:d}"
+		"en"		"You nominated {green}{1}{default} [{2} votes]"
+	}
+
+	"Client Nominated Single Replaced"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"You changed your nomination to {green}{1}{default} [1 vote]"
+	}
+
+	"Client Nominated Multiple Replaced"
+	{
+		// 1: Name of map
+		// 2: Number of votes
+		"#format"	"{1:s},{2:d}"
+		"en"		"You changed your nomination to {green}{1}{default} [{2} votes]"
+	}
+	
+	"Current map"
+	{
+		"en"		"You cannot nominate the current map!"
+	}
+
+	"Current nomination"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"You have already nominated '{1}'"
+	}
+
+	"Already Inserted"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"An admin has already inserted '{1}' into the next vote!"
+	}
+
+	"Already Nominated"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"'{1}' has already been nominated!"
+	}
+
+	"Admin Only Nominating"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"'{1}' can only be nominated by admins!"
+	}
+
+	"Map is on cooldown"
+	{
+		// 1: Name of map
+		// 2: Cooldown remaining
+		"#format"	"{1:s},{2:d}"
+		"en"		"'{1}' can be nominated after playing {2} more maps."
+	}
+
+	"Map needs more players"
+	{
+		// 1: Name of map
+		// 2: Players needed
+		"#format"	"{1:s},{2:d}"
+		"en"		"'{1}' requires {2} more players before you can nominate it!"
+	}
+
+	"Map needs fewer players"
+	{
+		// 1: Name of map
+		// 2: Number of players over the limit
+		"#format"	"{1:s},{2:d}"
+		"en"		"'{1}' requires {2} fewer players before you can nominate it!"
+	}
+
+	"Nominate Time Restriction - Hours"
+	{
+		// 1: Name of map
+		// 2: Hours
+		// 3: Minutes
+		"#format"	"{1:s},{2:d},{3:d}"
+		"en"		"'{1}' can be nominated in {2} hours and {3} minutes."
+	}
+
+	"Nominate Time Restriction - Minutes"
+	{
+		// 1: Name of map
+		// 2: Minutes
+		"#format"	"{1:s},{2:d}"
+		"en"		"'{1}' can be nominated in {2} minutes."
+	}
+
+	"Error Nominating"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"There was an error nominating '{1}'"
+	}
+
+	"Error Inserting"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"There was an error inserting '{1}'"
+	}
+
+	"Nominate Menu Title"
+	{
+		"en"		"Choose a map to nominate"
+	}
+
+	"Menu Current Map"
+	{
+		"en"		"[Current Map]"
+	}
+
+	"Menu Current Nom"
+	{
+		"en"		"[Your Nom]"
+	}
+
+	"Menu Nominated"
+	{
+		"en"		"[Nominated]"
+	}
+
+	"Menu Inserted"
+	{
+		"en"		"[Inserted]"
+	}
+
+	"Menu Cooldown"
+	{
+		// 1: Cooldown
+		"#format"	"{1:d}"
+		"en"		"[Cooldown: {1} maps]"
+	}
+
+	"Menu Not Enough Players"
+	{
+		// 1: Players needed
+		"#format"	"{1:d}"
+		"en"		"[Players +{1}]"
+	}
+
+	"Menu Too Many Players"
+	{
+		// 1: Number of players over the limit
+		"#format"	"{1:d}"
+		"en"		"[Players -{1}]"
+	}
+
+	"Menu Time"
+	{
+		// 1: Hours
+		// 2: Minutes
+		"#format"	"{1:d},{2:d}"
+		"en"		"[Wait {1}H {2}M]"
+	}
+
+	"Menu Admin Only"
+	{
+		"en"		"[Admin Only]"
+	}
+
+	"Menu Group Max"
+	{
+		// 1: Maximum 
+		"#format"	"{1:d}"
+		"en"		"[Group Max: {1}]"
+	}
+
+	"Insert Menu Title"
+	{
+		"en"		"Choose a map to insert"
+	}
+
+	"Map inserted"
+	{
+		"#format"	"{1:N},{2:s}"
+		"en"		"{lightgreen}{1}{default} inserted {green}{2}{default} into the map vote."
+	}
+
+	"Nominating not unlocked"
+	{
+		"#format"	"{1:d}"
+		"en"		"Nominating will be unlocked in {1} seconds."
+	}
+
+	"Wait to nominate"
+	{
+		"#format"	"{1:d}"
+		"en"		"You must wait {1} more seconds to nominate again."
+	}
+
+	"Cannot Nominate - Vote Complete"
+	{
+		"en"		"The nextmap has already been voted for."
+	}
+
+	"Cannot Nominate - Vote In Progress"
+	{
+		"en"		"The nextmap vote is currently in progress. You cannot nominate now."
+	}
+
+	"Cannot Nominate - Vote Full"
+	{
+		"en"		"The nomlist is full! You cannot nominate."
+	}
+
+	"Cannot insert - Vote In Progress"
+	{
+		"en"		"The nextmap vote is currently in progress. You cannot insert maps now."
+	}
+
+	"Nomination Removed - UnNominated"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"You removed your nomination of {green}{1}"
+	}
+	
+	"Nomination Removed - Not Enough Players"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"Your nomination of {green}{1}{default} was removed because there are no longer enough players."
+	}
+	
+	"Nomination Removed - Too Many Players"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"Your nomination of {green}{1}{default} was removed because there are too many players."
+	}
+	
+	"Nomination Removed - Time"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"Your nomination of {green}{1}{default} was removed because it is not allowed at this time."
+	}
+
+	"Unable To Unnominate"
+	{
+		"en"		"You have not nominated a map."
+	}
+	
+	"Unable To Unnominate Admin"
+	{
+		// 1: Name of client
+		"#format"	"{1:N}"
+		"en"		"{lightgreen}{1}{default} has not nominated a map."
+	}
+
+	"Nomlist Menu Title"
+	{
+		"en"		"Nominated Maps"
+	}
+
+	"Nomlist Menu No Maps"
+	{
+		"en"		"No maps nominated."
+	}
+	
+	"Nomlist Menu Inserted"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} [Admin]"
+	}
+	
+	"Nomlist Menu Single Vote"
+	{
+		"#format"	"{1:s}"
+		"en"		"{1} [1 vote]"
+	}
+	
+	"Nomlist Menu Multiple Votes"
+	{
+		"#format"	"{1:s},{2:d}"
+		"en"		"{1} [{2} votes]"
+	}
+	
+	"Nomlist Menu Owner"
+	{
+		// 1: Map name
+		// 2: Client name
+		"#format"	"{1:s},{2:N}"
+		"en"		"{1} [{2}]"
+	}
+	
+	"NombanList Client Not Valid"
+	{
+		"en"		"That client is no longer valid."
+	}
+
+	"Nominators Menu Title"
+	{
+		// 1: Map name
+		"#format"	"{1:s}"
+		"en"		"{1} nominators"
+	}
+
+	"NomStatus Menu Title"
+	{
+		// 1: Client name
+		"#format"	"{1:N}"
+		"en"		"Nomban Status for: {1}"
+	}
+
+	"Menu - Not Nombanned"
+	{
+		"en"		"Not nombanned"
+	}
+
+	"Menu - Nomban Duration"
+	{
+		// 1: String with the duration in days/hours/minutes as appropriate
+		"#format"	"{1:s}"
+		"en"		"Duration: {1}"
+	}
+
+	"Menu - Nomban end"
+	{
+		// 1: Formatted date string
+		"#format"	"{1:s}"
+		"en"		"End Date: {1}"
+	}
+
+	"Menu - Nomban timeleft"
+	{
+		// 1: String with the time left in days/hours/minutes as appropriate
+		"#format"	"{1:s}"
+		"en"		"Time left: {1}"
+	}
+
+	"Menu - Nomban Admin"
+	{
+		// 1: Name + Steamid of the admin
+		"#format"	"{1:s}"
+		"en"		"Admin: {1}"
+	}
+
+	"UnInsert Usage"
+	{
+		"en"		"Usage: sm_uninsert <map>"
+	}
+
+	"Map Uninserted"
+	{
+		// 1: Name of admin
+		// 2: Name of map
+		"#format"	"{1:N},{2:s}"
+		"en"		"{lightgreen}{1}{default} removed {green}{2}{default} from the nextmap vote."
+	}
+
+	"Failed to uninsert"
+	{
+		"#format"	"{1:s}"
+		"en"		"Failed to remove '{1}' from the nomlist."
+	}
+
+	"RemoveNom Usage"
+	{
+		"en"		"Usage: sm_removenom <target>"
+	}
+
+	"Nomination Removed - Admin Removed"
+	{
+		"#format"	"{1:s}"
+		"en"		"An admin removed your nomination of {green}{1}"
+	}
+
+	"Nomban usage"
+	{
+		"en"		"Usage: sm_nomban <target> <duration (in minutes)>"
+	}
+
+	"Already nombanned"
+	{
+		"#format"	"{1:N}"
+		"en"		"{1} is already nombanned!"
+	}
+
+	"Nombanned permanent"
+	{
+		"#format"	"{1:N}"
+		"en"		"nombanned {1} permanently."
+	}
+
+	"Nominating Disabled"
+	{
+		"en"		"An admin has disabled nominating."
+	}
+
+	"Nominating already disabled"
+	{
+		"en"		"Nominating is already disabled."
+	}
+
+	"Nominating Enabled"
+	{
+		"en"		"An admin has enabled nominating."
+	}
+
+	"Nominating already enabled"
+	{
+		"en"		"Nominating is already enabled."
+	}
+
+	"Cannot nominate - Nombanned"
+	{
+		"en"		"You cannot nominate a map because you have been nombanned. Use {green}!nomstatus{default} for more information."
+	}
+
+	"Nombanned"
+	{
+		"#format"	"{1:N},{2:d}"
+		"en"		"nombanned {1} for {2} minutes."
+	}
+
+	"Nomination removed on nomban"
+	{
+		"en"		"Your nomination was removed because you were nombanned."
+	}
+
+	"UnNomban usage"
+	{
+		"en"		"Usage: sm_unnomban <target>"
+	}
+
+	"Already not nombanned"
+	{
+		"#format"	"{1:N}"
+		"en"		"{1} is already not nombanned!"
+	}
+
+	"UnNombanned"
+	{
+		"#format"	"{1:N}"
+		"en"		"unnombanned {1}"
+	}
+
+	"Menu Got UnNombanned"
+	{
+		"en"		"You have been unnombanned."
+	}
+
+	"Cookies are not cached"
+	{
+		"en"		"Cookies are not loaded yet. Please wait."
+	}
+
+	"Can only use command in game"
+	{
+		"en"		"You can only use this command in game."
+	}
+}

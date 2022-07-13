@@ -1,0 +1,185 @@
+"Phrases"
+{	
+	"Prefix"
+	{
+		"en"		"{darkred}[MCU]{default}"
+	}
+
+	"Initiated Map Vote"
+	{
+		"en"		"Initiated Map Vote"
+	}
+
+	"Vote started"
+	{
+		"en"		"Voting for the next map has started."
+	}
+
+	"Runoff Vote started"
+	{
+		"en"		"Voting for the next map has started."
+	}
+
+	"Nextmap Voting Finished"
+	{
+		// 1: Name of next map chosen
+		// 2: Percent of votes
+		// 3: Total votes
+		"#format"	"{1:s},{2:.1f},{3:d}"
+		"en"		"Map voting has finished. The next map will be {green}{1}{default}. (Received {2}%% of {3} votes)"
+	}
+
+	"Vote End - No Votes"
+	{
+		// 1: Name of next map chosen
+		"#format"	"{1:s}"
+		"en"		"No votes received! Setting nextmap to {green}{1}."
+	}
+	
+	"Vote Warning"
+	{
+		// 1: Number of seconds until vote starts
+		"#format"	"{1:d}"
+		"en"		"Warning! Voting for the next map will begin in: {1}s"
+	}
+
+	"Revote Warning"
+	{
+		// 1: Number of seconds until runoff vote starts
+		"#format"	"{1:d}"
+		"en"		"Warning! Runoff vote will begin in: {1}s"
+	}
+
+	"Tie Vote"
+	{
+		// 1: Number of maps with the same votes
+		"#format"	"{1:d}"
+		"en"		"The top {1} maps had the same number of votes. \nA revote is needed."
+	}
+
+	"Revote is needed"
+	{
+		// 1: Percent of votes
+		"#format"	"{1:d}"
+		"en"		"No map received more than {1}%% of the vote. \nA revote is needed."
+	}
+
+	"Current Map Extended"
+	{
+		// 1: Percent of votes
+		// 2: Total votes
+		"#format"	"{1:.1f},{2:d}"
+		"en"		"The current map has been extended. (Received {1}%% of {2} votes)"
+	}
+	
+	"Current Map Stays"
+	{
+		// 1: Percent of votes
+		// 2: Total votes
+		"#format"	"{1:.1f},{2:d}"
+		"en"		"Current map continues! The vote has spoken! (Received {1}%% of {2} votes)"
+	}
+
+	"Menu - Vote Nextmap"
+	{
+		"en"		"Vote for the next map!"
+	}
+	
+	"Extend Map"
+	{
+		"en"		"Extend Map"
+	}
+
+	"Dont Change"
+	{
+		"en"		"Don't Change"
+	}
+
+	"Random Map"
+	{
+		"en"		"Random Map"
+	}
+
+	"Map was not found"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"Map '{1}' was not found."
+	}
+
+	"Setnextmap Usage"
+	{
+		"en"		"Usage: sm_setnextmap <map|_random>"
+	}
+
+	"Changed Next Map"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"Changed nextmap to \"{1}\"."
+	}
+
+	"Config reload successful"
+	{
+		"en"		"Successfully reloaded the config."
+	}
+
+	"Config reload unsuccessful"
+	{
+		"en"		"Unsuccessfully reloaded the config. See logs for more details."
+	}
+
+	"Maplist reload successful"
+	{
+		"en"		"Successfully reloaded the maplist."
+	}
+
+	"Maplist reload unsuccessful"
+	{
+		"en"		"Unsuccessfully reloaded the maplist. See logs for more details."
+	}
+
+	"Exclude Map Usage"
+	{
+		"en"		"Usage: sm_excludemap <map> [value] (Config value used if no value specified)"
+	}
+
+	"Exclude Map Set"
+	{
+		// 1: Name of map
+		// 2: Cooldown set
+		"#format"	"{1:s},{2:d}"
+		"en"		"Set cooldown for map '{1}' to {2}."
+	}
+
+	"Exclude Map Value Error"
+	{
+		"en"		"Value entered must be greater than 0."
+	}
+
+	"Extends Left"
+	{
+		// 1: Extends used
+		// 2: Maximum extends
+		// 3: Number of extends left
+		"#format"	"{1:d},{2:d},{3:d}"
+		"en"		"Extends used: {1}/{2} ({3} left)"
+	}
+
+	"Clear cooldown usage"
+	{
+		"en"		"Usage: sm_clearcd <map>"
+	}
+
+	"Map not on cooldown"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"Map {1} is not currently on cooldown."
+	}
+
+	"Nominated by"
+	{
+		"en"		"Nominated by:"
+	}
+}
