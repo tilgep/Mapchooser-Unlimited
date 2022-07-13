@@ -8,7 +8,8 @@ Another Mapchooser alternative with changes to nominating and other QoL features
 
 ## Important
 - This has only been tested for CSGO Zombie Escape and there are no plans to support anything else  
-Feature requests are welcome though
+Feature requests are welcome though  
+- **Please translate if you can and make a pull request or send to `tilgep#6294`**
 - For RTV to work, you must change RTV to use the `mapchooser_unlimited` include file (Any natives used *should* work)
 
 ## Features
