@@ -1,18 +1,15 @@
 # Mapchooser Unlimited
 Another Mapchooser alternative with changes to nominating and other QoL features  
   
-- Changes based on a version for GFL:ZE ([Vauff](https://github.com/Vauff/) and/or [Snowy](https://github.com/SnowyGFL))
+- Changes based on a private version for GFL:ZE ([Vauff](https://github.com/Vauff/) and/or [Snowy](https://github.com/SnowyGFL))
 - Based on [mapchooser_extended](https://forums.alliedmods.net/showthread.php?t=156974) by Powerlord and Alliedmodders
   
- **Thanks to Detroid and Koen for testing**
+ **Thanks to [Detroid](https://github.com/DetroidZE) and [Koen](https://github.com/notkoen) for testing**
 
 ## Important
-- This has only been tested on CSGO and there are no plans to support anything else  
-- To allow per-client vote menu shuffling, you must compile with **Sourcemod 1.11 or later**  
-And any servers you use this on must use **1.11 or later.**  
-It will work with 1.10 if you disable this feature  
-- For RTV to work, you must change RTV to use the `mapchooser_unlimited` include file  
-- The directory for maps on cooldown may need to be created if it seems to not save after a server restart
+- This has only been tested for CSGO Zombie Escape and there are no plans to support anything else  
+Feature requests are welcome though
+- For RTV to work, you must change RTV to use the `mapchooser_unlimited` include file (Any natives used *should* work)
 
 ## Features
 ### Mapchooser
@@ -30,12 +27,14 @@ Change how the maps are picked with the cvar (`mcu_vote_mode`)
 - AdminOnly maps with 1 vote or more can be nominated by any players  
 Only an admin can make the first vote though  
 - Set a random next map with `!setnextmap _random`  
+- See who nominated the map which won the vote  
 
 ### Nominations
 - See the list of players who have voted for a map with `!nomlist`  
 - Admins can enable or disable nominating
 - Admins can ban players from nominating with `!nomban`  
 - Configure how often nominating messages are shown
+- Command groups for easy permission overrides
 
 ### Other
 - Easily configure any message using translation files with documentation of format parameters  
@@ -57,7 +56,7 @@ Here is an example config with all the options you can use
 {
     "Groups" // Start of groups - Don't change this
     {
-        "Group name" // Can be changed
+        "Group name" // Can be changed (visible in !showmapconfig)
         {
             "Cooldown"    "10"  // All maps in the group will be put on 10 cooldown when any of them is played
             "Max"         "2"   // Only 2 of these maps will appear in the map vote
@@ -77,7 +76,7 @@ Here is an example config with all the options you can use
         "MaxPlayers"    "12"            // This map needs less than 12 players to appear in the map vote or be nominated
         "MinTime"       "0900"          // Can only appear in the vote or be nominated after 09:00 server time (0000 - 2359)
         "MaxTime"       "1530"          // Can only appear in the vote or be nominated before 15:30 server time (0000 - 2359)
-        "AdminOnly"     "1"             // Can only be nominated by admins (0/1) (Default: ADMFLAG_BAN, override sm_adminnom to change)
+        "AdminOnly"     "1"             // Can only be nominated by admins (0/1) (Default: ADMFLAG_BAN, override nom_admin to change)
         "NominateOnly"  "0"             // Can appear randomly in the vote (0/1)
         "Description"   "Classic map"   // This description will appear on the nominating menu and vote menu
     }
