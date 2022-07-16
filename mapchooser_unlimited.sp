@@ -5,7 +5,7 @@
 #include <mapchooser_unlimited>
 #include <csgocolors_fix>
 
-#define PLUGIN_VERSION "1.1.2"
+#define PLUGIN_VERSION "1.1.3"
 
 //Rewritten from scratch, but influenced by mapchooser_extended
 public Plugin myinfo =
@@ -56,6 +56,7 @@ int g_iSerial = -1;     //Used to check the status of maplist loading
 
 bool g_bConfig = false; //Is config loaded
 KeyValues g_kvConfig;   //Config
+int g_iGroups;          //Number of groups in the config (to help optimise)
 
 StringMap g_Nominations; //Maps nominated with number of votes
 char g_sNominations[MAXPLAYERS+1][PLATFORM_MAX_PATH]; //Nominations made by each client
@@ -1241,21 +1242,16 @@ public int Handler_VoteMenu(Menu menu, MenuAction action, int param1, int param2
                 {
                     Format(map, sizeof(map), "%t", "Random Map");
                     SetNextMap(g_sRandomMap);
-                    valid = false;
                 }
                 else
                 {
                     SetNextMap(map);
-                    valid = true;
                 }
 
                 CPrintToChatAll("%t %t", "Prefix", "Vote End - No Votes", map);
                 LogAction(-1, -1, "Map voting finished. No votes received.");
 
-                if(valid)
-                {
-                    ShowNominators();
-                }
+                ShowNominators();
 
                 g_bVoteEnded = true;
                 WipeAllNominations(Removed_VoteEnded);
@@ -1360,13 +1356,11 @@ public void VoteHandler_VoteMenu(Menu menu,
     }
     else
     {
-        bool random;
         if(g_ChangeTime == MapChange_MapEnd)
         {
             if(StrEqual(map, VOTE_RANDOM))
             {
                 map = g_sRandomMap;
-                random = true;
             }
             SetNextMap(map);
         }
@@ -1375,7 +1369,6 @@ public void VoteHandler_VoteMenu(Menu menu,
             if(StrEqual(map, VOTE_RANDOM))
             {
                 map = g_sRandomMap;
-                random = true;
             }
             Handle data;
             CreateDataTimer(4.0, Timer_ChangeMap, data);
@@ -1387,7 +1380,6 @@ public void VoteHandler_VoteMenu(Menu menu,
             if(StrEqual(map, VOTE_RANDOM))
             {
                 map = g_sRandomMap;
-                random = true;
             }
             SetNextMap(map);
             g_bChangeMapAtRoundEnd = true;
@@ -1398,10 +1390,7 @@ public void VoteHandler_VoteMenu(Menu menu,
         CPrintToChatAll("%t %t", "Prefix", "Nextmap Voting Finished", map, (float(item_info[0][VOTEINFO_ITEM_VOTES])/float(num_votes)*100), num_votes);
         LogAction(-1, -1, "Voting for next map has finished. Nextmap: %s.", map);
 
-        if(!random)
-        {
-            ShowNominators();
-        }
+        ShowNominators();
     }
 
     g_bVoteInProgress = false;
@@ -1553,7 +1542,7 @@ public int InsertNominatedMaps(ArrayList voteList, int toAdd)
                         int votes = 0;
                         snap2.GetKey(i, map, sizeof(map));
 
-                        if(CheckGroupMax(map, voteList)!=0)
+                        if(CheckGroupMax(map, voteList, false) != 0)
                         {
                             nomCopy.Remove(map);
                             continue;
@@ -1605,7 +1594,7 @@ public int InsertNominatedMaps(ArrayList voteList, int toAdd)
                         int rand = GetRandomInt(0, maps.Length-1);
                         GetArrayString(maps, rand, map, sizeof(map));
 
-                        if(CheckGroupMax(map, voteList)!=0)
+                        if(CheckGroupMax(map, voteList, false) != 0)
                         {
                             nomCopy.Remove(map);
                             continue;
@@ -1645,7 +1634,7 @@ public int InsertNominatedMaps(ArrayList voteList, int toAdd)
                 int votes;
                 snap.GetKey(GetRandomInt(0, nomCopy.Size-1), map, sizeof(map));
 
-                if(CheckGroupMax(map, voteList)!=0)
+                if(CheckGroupMax(map, voteList, false) != 0)
                 {
                     nomCopy.Remove(map);
                     continue;
@@ -1682,7 +1671,7 @@ public int InsertNominatedMaps(ArrayList voteList, int toAdd)
                 int votes = 0;
                 snap.GetKey(i, map, sizeof(map));
 
-                if(CheckGroupMax(map, voteList)!=0)
+                if(CheckGroupMax(map, voteList, false) != 0)
                 {
                     nomCopy.Remove(map);
                     continue;
@@ -1702,7 +1691,7 @@ public int InsertNominatedMaps(ArrayList voteList, int toAdd)
                 int votes = 0;
                 GetArrayString(maps, rand, map, sizeof(map));
 
-                if(CheckGroupMax(map, voteList)!=0)
+                if(CheckGroupMax(map, voteList, false) != 0)
                 {
                     nomCopy.Remove(map);
                     int index = FindStringInArray(maps, map);
@@ -1802,7 +1791,7 @@ public int InsertNominatedMapsLimited(ArrayList voteList, int toAdd)
         {
             snap.GetKey(GetRandomInt(0, nomCopy.Size-1), map, sizeof(map));
 
-            if(CheckGroupMax(map, voteList)!=0)
+            if(CheckGroupMax(map, voteList, false) != 0)
             {
                 nomCopy.Remove(map);
                 continue;
@@ -1862,7 +1851,7 @@ public int InsertRandomMaps(ArrayList voteList, int toAdd)
         if(InternalGetMapVotes(map) > 0) continue;
         if(InternalIsMapAdminOnly(map)) continue;
         if(InternalIsMapNominateOnly(map)) continue;
-        if(CheckGroupMax(map, voteList) != 0) continue;
+        if(CheckGroupMax(map, voteList, false) != 0) continue;
         if(FindStringInArray(voteList, map) != -1) continue;
         
         maps.PushString(map);
@@ -1885,7 +1874,7 @@ public int InsertRandomMaps(ArrayList voteList, int toAdd)
         rand = GetRandomInt(0, maps.Length-1);
         GetArrayString(maps, rand, map, sizeof(map));
 
-        if(CheckGroupMax(map, voteList)!=0)
+        if(CheckGroupMax(map, voteList) != 0)
         {
             maps.Erase(rand);
             continue;
@@ -1972,7 +1961,17 @@ public void ShowNominators()
         Format(names, sizeof(names), "%s%s%N", names, count>0 ? ", " : " ", i);
         count++;
     }
-    if(count == 0) return;
+    
+    if(count == 0)
+    {
+        Format(names, sizeof(names), "%s", "Noone");
+        Format(lognames, sizeof(lognames), "%s", "Noone");
+
+        if(g_cv_ShowNominators.BoolValue) CPrintToChatAll("%t %t %t", "Prefix", "Nominated by", names);
+        LogMessage("Winning map nominated by: %s", lognames);
+
+        return;
+    }
 
     if(g_cv_ShowNominators.BoolValue) CPrintToChatAll("%t %t %s", "Prefix", "Nominated by", names);
     LogMessage("Winning map nominated by:%s", lognames);
@@ -3006,6 +3005,7 @@ public bool LoadConfig()
         delete g_kvConfig;
         g_bConfig = false;
     }
+    g_iGroups = 0;
 
     char sConfigFile[PLATFORM_MAX_PATH];
     BuildPath(Path_SM, sConfigFile, sizeof(sConfigFile), "configs/mapchooser_unlimited.cfg");
@@ -3032,7 +3032,25 @@ public bool LoadConfig()
     }
     g_kvConfig.Rewind();
     g_bConfig = true;
+
+    g_iGroups = CountGroups();
+    if(g_cv_ExtendedLogging.BoolValue) LogMessage("Found %d groups in the config.", g_iGroups);
+
     return true;
+}
+
+stock int CountGroups()
+{
+    int count = 0;
+
+    if(!g_kvConfig.JumpToKey("Groups")) return count;
+    if(!g_kvConfig.GotoFirstSubKey()) return count;
+    
+    count++;
+
+    while(g_kvConfig.GotoNextKey()) count++;
+
+    return count;
 }
 
 stock char[] GetRandomMap()
@@ -3141,11 +3159,10 @@ int CheckGroupMax(const char[] map, ArrayList list, bool checkRandomMap = true)
     //Enter first group
     if(!g_kvConfig.GotoFirstSubKey()) return 0;
 
-    char group[64];
     char buf[PLATFORM_MAX_PATH];
     int max;
 
-    do
+    for(int i = 0; i < g_iGroups; i++)
     {
         //If map-to-find isnt in this group go to next one
         if(!g_kvConfig.JumpToKey(map)) continue;
@@ -3155,9 +3172,6 @@ int CheckGroupMax(const char[] map, ArrayList list, bool checkRandomMap = true)
         max = g_kvConfig.GetNum("Max", -1);
         if(max == -1) continue;
 
-        //Get the group name for later
-        KvGetSectionName(g_kvConfig, group, sizeof(group));
-        
         int count = 0; //Number of maps in group and list
 
         //Check if the Random Map option is in this group
@@ -3168,9 +3182,9 @@ int CheckGroupMax(const char[] map, ArrayList list, bool checkRandomMap = true)
         }
 
         //Check all maps in list, if a map is in the group and list increase count
-        for(int i = 0; i < list.Length; i ++)
+        for(int j = 0; j < list.Length; j++)
         {
-            list.GetString(i, buf, sizeof(buf));
+            list.GetString(j, buf, sizeof(buf));
 
             if(StrEqual(map, buf)) continue;            //Don't count map we are checking
             if(!g_kvConfig.JumpToKey(buf)) continue;    //Check if this list-map is in the group
@@ -3186,11 +3200,8 @@ int CheckGroupMax(const char[] map, ArrayList list, bool checkRandomMap = true)
             return max;
         }
 
-        g_kvConfig.Rewind();
-        g_kvConfig.JumpToKey("Groups");
-        g_kvConfig.JumpToKey(group);
+        if(!g_kvConfig.GotoNextKey()) break;
     }
-    while(g_kvConfig.GotoNextKey());
 
     return 0;
 }

@@ -178,8 +178,20 @@
 		"en"		"Map {1} is not currently on cooldown."
 	}
 
+	"Map cooldown cleared"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"Cleared cooldown for {green}{1}"
+	}
+
 	"Nominated by"
 	{
 		"en"		"Nominated by:"
+	}
+
+	"Noone"
+	{
+		"en"		"Noone"
 	}
 }
