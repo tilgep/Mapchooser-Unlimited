@@ -5,7 +5,7 @@
 #include <mapchooser_unlimited>
 #include <csgocolors_fix>
 
-#define PLUGIN_VERSION "1.1.1"
+#define PLUGIN_VERSION "1.1.2"
 
 //Rewritten from scratch, but influenced by mapchooser_extended
 public Plugin myinfo =
@@ -1952,6 +1952,7 @@ void CheckNomRestrictions(bool players = false, bool time = false)
             }
         }
     }
+    delete snap;
 }
 
 public void ShowNominators()
