@@ -369,13 +369,20 @@ forward void OnNominationRemoved(NominateRemoved reason, const char[] map, int c
  * Called when the map vote is starting.
  * 
  */
-forward void OnMapVoteWarningStarted();
+forward void OnMapVoteWarningStart();
+
+/**
+ * Called when the warning timer ticks
+ * 
+ * @param time     Number of seconds left
+ */
+forward void OnMapVoteWarningTick(int time);
 
 /**
  * Called when a runoff vote is starting.
  * 
  */
-forward void OnRunoffVoteWarningStarted();
+forward void OnRunoffVoteWarningStart();
 
 /**
  * Called when a mapvote has started
@@ -394,7 +401,7 @@ forward void OnMapVoteStarted(bool runoff);
  *                  If random chosen, name of the randomly chosen map
  *
  */
-forward void OnMapVoteEnded(const char[] map);
+forward void OnMapVoteEnd(const char[] map);
 
 /**
  * Called when a map is added from the nominations list to the vote
