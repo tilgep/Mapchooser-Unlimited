@@ -5,7 +5,7 @@
 #include <mapchooser_unlimited>
 #include <csgocolors_fix>
 
-#define PLUGIN_VERSION "1.1.3"
+#define PLUGIN_VERSION "1.2.0"
 
 //Rewritten from scratch, but influenced by mapchooser_extended
 public Plugin myinfo =
@@ -109,6 +109,7 @@ ConVar g_cv_ShowNominators;
 
 GlobalForward g_fwdNominationRemoved;
 GlobalForward g_fwdMapVoteStarted;
+GlobalForward g_fwdWarningTick;
 GlobalForward g_fwdRunoffVoteStarted;
 GlobalForward g_fwdVoteStarted;
 GlobalForward g_fwdMapVoteEnded;
@@ -164,16 +165,17 @@ public void OnPluginStart()
     g_cv_Include = CreateConVar("mcu_include", "5", "Maximum number of nominated maps to include in the vote.", _, true, 0.0);
     g_cv_TotalVoteOptions = CreateConVar("mcu_total_options", "9", "Number of options that should appear in the vote (including extend, random, noms, no vote)", _, true, 0.0);
     g_cv_ShowNominators = CreateConVar("mcu_show_nominators", "1", "Whether or not to show who nominated the chosen map when the vote ends. (0=disabled, 1=enabled)", _, true, 0.0, true, 1.0);
-
+    
     AutoExecConfig(true, "mapchooser_unlimited");
 
     HookEvent("round_end", Event_RoundEnd);
 
     g_fwdNominationRemoved = CreateGlobalForward("OnNominationRemoved", ET_Ignore, Param_Cell, Param_String, Param_Cell);
-    g_fwdMapVoteStarted = CreateGlobalForward("OnMapVoteWarningStarted", ET_Ignore);
-    g_fwdRunoffVoteStarted = CreateGlobalForward("OnRunoffVoteWarningStarted", ET_Ignore);
+    g_fwdMapVoteStarted = CreateGlobalForward("OnMapVoteWarningStart", ET_Ignore);
+    g_fwdWarningTick = CreateGlobalForward("OnMapVoteWarningTick", ET_Ignore, Param_Cell);
+    g_fwdRunoffVoteStarted = CreateGlobalForward("OnRunoffVoteWarningStart", ET_Ignore);
     g_fwdVoteStarted = CreateGlobalForward("OnMapVoteStarted", ET_Ignore, Param_Cell);
-    g_fwdMapVoteEnded = CreateGlobalForward("OnMapVoteEnded", ET_Ignore, Param_String);
+    g_fwdMapVoteEnded = CreateGlobalForward("OnMapVoteEnd", ET_Ignore, Param_String);
     g_fwdMapAddedToVote = CreateGlobalForward("OnMapAddedToVote", ET_Ignore, Param_String, Param_Cell, Param_Cell);
     g_fwdMapNominated = CreateGlobalForward("OnMapNominated", ET_Ignore, Param_Cell, Param_String, Param_Cell, Param_Cell);
     g_fwdMapInserted = CreateGlobalForward("OnMapInserted", ET_Ignore, Param_Cell, Param_String);
@@ -885,6 +887,10 @@ public Action Timer_StartMapVote(Handle timer, Handle data)
     
     int warningMaxTime = ReadPackCell(data);
     int warningTimeRemaining = warningMaxTime - timePassed;
+    
+    Call_StartForward(g_fwdWarningTick);
+    Call_PushCell(warningTimeRemaining);
+    Call_Finish();
 
     char warningPhrase[32];
     ReadPackString(data, warningPhrase, sizeof(warningPhrase));
@@ -912,7 +918,7 @@ public Action Timer_StartMapVote(Handle timer, Handle data)
         }
     }
     timePassed++;
-    if(timePassed >= warningMaxTime)
+    if(timePassed > warningMaxTime)
     {
         if(timer == g_RetryTimer)
         {

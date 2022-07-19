@@ -6,7 +6,7 @@
 #include <mapchooser_unlimited>
 #include <csgocolors_fix>
 
-#define PLUGIN_VERSION "1.1.0"
+#define PLUGIN_VERSION "1.2.0"
 
 public Plugin myinfo =
 {
@@ -37,6 +37,7 @@ ConVar g_cv_NomAnnounceInterval;
 ConVar g_cv_AnnounceToClient;
 ConVar g_cv_RemoveNomOnNomban;
 ConVar g_cv_ShowNomInConsole;
+ConVar g_cv_ShowCooldown;
 
 bool g_bEnabled = true;         //Is nominating allowed
 
@@ -103,6 +104,7 @@ public void OnPluginStart()
     g_cv_AnnounceToClient = CreateConVar("nominate_clientannounce", "1", "Should the client receive a message about their nomination if it doesnt print to all.", _, true, 0.0, true, 1.0);
     g_cv_ShowNomInConsole = CreateConVar("nominate_console", "1", "Should every nomination be printed into client consoles", _, true, 0.0, true, 1.0);
     g_cv_RemoveNomOnNomban = CreateConVar("nominate_banclear", "1", "Should a client's nomination be removed when they get nombanned.", _,true, 0.0, true, 1.0);
+    g_cv_ShowCooldown = CreateConVar("nominate_showcooldown", "1", "Whether the current cooldown for maps should be shown in the nominate menu (1=enabled, 0=disabled)", _, true, 0.0, true, 1.0);
 
     AutoExecConfig(true, "nominations_unlimited");
 
@@ -326,7 +328,14 @@ public Action Command_Nominate(int client, int args)
 
     if((status & CanClientNom_Cooldown) == CanClientNom_Cooldown)
     {
-        CReplyToCommand(client, "%t %t", "NPrefix", "Map is on cooldown", map, GetMapCooldown(map));
+        if(g_cv_ShowCooldown.BoolValue)
+        {
+            CReplyToCommand(client, "%t %t", "NPrefix", "Map is on cooldown", map, GetMapCooldown(map));
+        }
+        else
+        {
+            CReplyToCommand(client, "%t %t", "NPrefix", "Map is on cooldown - No Value", map);
+        }
         return Plugin_Handled;
     }
 
@@ -924,7 +933,10 @@ public int Handler_MapSelectMenu(Menu menu, MenuAction action, int param1, int p
                 return 0;
             }
 
-            /* Map cannot be nominated - Lets tell the client why */
+            /* 
+                Map cannot be nominated - Lets tell the client why 
+                These should VERY rarely be seen since items are disabled on menu creation
+            */
 
             if((status & CanClientNom_CurrentMap) == CanClientNom_CurrentMap)
             {
@@ -934,45 +946,52 @@ public int Handler_MapSelectMenu(Menu menu, MenuAction action, int param1, int p
 
             if((status & CanClientNom_CurrentNom) == CanClientNom_CurrentNom)
             {
-                CPrintToChat(param1, "%t %t", "NPrefix", "Current nomination");
+                CPrintToChat(param1, "%t %t", "NPrefix", "Current nomination", map);
                 return 0;
             }
 
             if((status & CanClientNom_Inserted) == CanClientNom_Inserted)
             {
-                CPrintToChat(param1, "%t %t", "NPrefix", "Already Inserted");
+                CPrintToChat(param1, "%t %t", "NPrefix", "Already Inserted", map);
                 return 0;
             }
 
             if((status & CanClientNom_Nominated) == CanClientNom_Nominated)
             {
-                CPrintToChat(param1, "%t %t", "NPrefix", "Already Nominated");
+                CPrintToChat(param1, "%t %t", "NPrefix", "Already Nominated", map);
                 return 0;
             }
 
             if((status & CanClientNom_AdminOnly) == CanClientNom_AdminOnly)
             {
-                CPrintToChat(param1, "%t %t", "NPrefix", "Admin Only Nominating");
+                CPrintToChat(param1, "%t %t", "NPrefix", "Admin Only Nominating", map);
                 return 0;
             }
 
             if((status & CanClientNom_Cooldown) == CanClientNom_Cooldown)
             {
-                CPrintToChat(param1, "%t %t", "NPrefix", "Map is on cooldown", GetMapCooldown(map));
+                if(g_cv_ShowCooldown.BoolValue)
+                {
+                    CPrintToChat(param1, "%t %t", "NPrefix", "Map is on cooldown", map, GetMapCooldown(map));
+                }
+                else
+                {
+                    CPrintToChat(param1, "%t %t", "NPrefix", "Map is on cooldown - No Value", map);
+                }
                 return 0;
             }
 
             if((status & CanClientNom_NotEnoughPlayers) == CanClientNom_NotEnoughPlayers)
             {
                 int players = GetMapPlayerRestriction(map) * -1;
-                CPrintToChat(param1, "%t %t", "NPrefix", "Map needs more players", players);
+                CPrintToChat(param1, "%t %t", "NPrefix", "Map needs more players", map, players);
                 return 0;
             }
 
             if((status & CanClientNom_TooManyPlayers) == CanClientNom_TooManyPlayers)
             {
                 int players = GetMapPlayerRestriction(map) * -1;
-                CPrintToChat(param1, "%t %t", "NPrefix", "Map needs more players", players);
+                CPrintToChat(param1, "%t %t", "NPrefix", "Map needs more players", map, players);
                 return 0;
             }
 
@@ -984,17 +1003,17 @@ public int Handler_MapSelectMenu(Menu menu, MenuAction action, int param1, int p
                 {
                     int hours = minutes / 60;
                     minutes = minutes % 60;
-                    CPrintToChat(param1, "%t %t", "NPrefix", "Nominate Time Restriction - Hours", hours, minutes);
+                    CPrintToChat(param1, "%t %t", "NPrefix", "Nominate Time Restriction - Hours", map, hours, minutes);
                 }
                 else
                 {
-                    CPrintToChat(param1, "%t %t", "NPrefix", "Nominate Time Restriction - Minutes", minutes);
+                    CPrintToChat(param1, "%t %t", "NPrefix", "Nominate Time Restriction - Minutes", map, minutes);
                 }
         
                 return 0;
             }
 
-            CPrintToChat(param1, "%t %t", "NPrefix", "Error Nominating");
+            CPrintToChat(param1, "%t %t", "NPrefix", "Error Nominating", map);
 
             return 0;
         }
@@ -1047,7 +1066,14 @@ public int Handler_MapSelectMenu(Menu menu, MenuAction action, int param1, int p
 
             if((status & CanClientNom_Cooldown) == CanClientNom_Cooldown)
             {
-                Format(display, sizeof(display), "%s %t", map, "Menu Cooldown", GetMapCooldown(map));
+                if(g_cv_ShowCooldown.BoolValue)
+                {
+                    Format(display, sizeof(display), "%s %t", map, "Menu Cooldown", GetMapCooldown(map));
+                }
+                else
+                {
+                    Format(display, sizeof(display), "%s %t", map, "Menu Cooldown - No Value");
+                }
                 return RedrawMenuItem(display);
             }
 

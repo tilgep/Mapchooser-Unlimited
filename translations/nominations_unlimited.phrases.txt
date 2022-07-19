@@ -126,6 +126,13 @@
 		"en"		"'{1}' can be nominated after playing {2} more maps."
 	}
 
+	"Map is on cooldown - No Value"
+	{
+		// 1: Name of map
+		"#format"	"{1:s}"
+		"en"		"'{1}' was played recently and cannot be nominated."
+	}
+
 	"Map needs more players"
 	{
 		// 1: Name of map
@@ -203,6 +210,11 @@
 		// 1: Cooldown
 		"#format"	"{1:d}"
 		"en"		"[Cooldown: {1} maps]"
+	}
+
+	"Menu Cooldown - No Value"
+	{
+		"en"		"[Recently Played]"
 	}
 
 	"Menu Not Enough Players"
