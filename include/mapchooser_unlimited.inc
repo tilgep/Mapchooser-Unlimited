@@ -366,7 +366,7 @@ native int GetMapMaxExtends(const char[] map);
 forward void OnNominationRemoved(NominateRemoved reason, const char[] map, int client);
 
 /**
- * Called when the map vote is starting.
+ * Called when the map vote warning timer is starting.
  * 
  */
 forward void OnMapVoteWarningStart();
@@ -379,7 +379,7 @@ forward void OnMapVoteWarningStart();
 forward void OnMapVoteWarningTick(int time);
 
 /**
- * Called when a runoff vote is starting.
+ * Called when a runoff vote warning timer is starting.
  * 
  */
 forward void OnRunoffVoteWarningStart();
