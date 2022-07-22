@@ -43,6 +43,11 @@ Only an admin can make the first vote though
 - Singular include and translation files for easy navigation  
 - Logging of all actions for easy administration    
 
+### Sounds
+- Simplified/updated version of [this plugin](https://github.com/powerlord/sourcemod-mapchooser-extended/blob/master/addons/sourcemod/scripting/mapchooser_extended_sounds.sp)
+- Plays sounds when vote events happen (see example config)
+- Automatically adds sounds to downloads table
+
 ## Example Config
 Here is an example config with all the options you can use  
 `configs/mapchooser_unlimited.cfg`  
