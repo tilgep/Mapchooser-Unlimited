@@ -1473,7 +1473,7 @@ public int InsertInsertedMaps(ArrayList voteList, int max)
 
         if(g_cv_ExtendedLogging.BoolValue)
         {
-            LogMessage("Added %s to vote.", map);
+            LogMessage("Added %s to vote (Inserted).", map);
         }
 
         /* Call OnMapAddedToVote(map, votes, inserted) */
@@ -1564,7 +1564,7 @@ public int InsertNominatedMaps(ArrayList voteList, int toAdd)
 
                             if(g_cv_ExtendedLogging.BoolValue)
                             {
-                                LogMessage("Added %s to vote.", map);
+                                LogMessage("Added %s to vote (Nominated-Top).", map);
                             }
 
                             Call_StartForward(g_fwdMapAddedToVote);
@@ -1617,7 +1617,7 @@ public int InsertNominatedMaps(ArrayList voteList, int toAdd)
 
                         if(g_cv_ExtendedLogging.BoolValue)
                         {
-                            LogMessage("Added %s to vote.", map);
+                            LogMessage("Added %s to vote (Nominated-Top).", map);
                         }
 
                         Call_StartForward(g_fwdMapAddedToVote);
@@ -1655,7 +1655,7 @@ public int InsertNominatedMaps(ArrayList voteList, int toAdd)
 
                     if(g_cv_ExtendedLogging.BoolValue)
                     {
-                        LogMessage("Added %s to vote.", map);
+                        LogMessage("Added %s to vote (Nominated-Random).", map);
                     }
                 }
                 nomCopy.Remove(map);
@@ -1717,7 +1717,7 @@ public int InsertNominatedMaps(ArrayList voteList, int toAdd)
 
                 if(g_cv_ExtendedLogging.BoolValue)
                 {
-                    LogMessage("Added %s to vote.", map);
+                    LogMessage("Added %s to vote (Nominated-Weight).", map);
                 }
 
                 Call_StartForward(g_fwdMapAddedToVote);
@@ -1761,7 +1761,7 @@ public int InsertNominatedMapsLimited(ArrayList voteList, int toAdd)
     int noms = g_Nominations.Size;
 
     StringMapSnapshot snap = g_Nominations.Snapshot();
-    if(toAdd <= noms) //We can add all the noms
+    if(noms <= toAdd) //We can add all the noms
     {
         for(int i = 0; i < noms; i++)
         {
@@ -1773,7 +1773,7 @@ public int InsertNominatedMapsLimited(ArrayList voteList, int toAdd)
 
             if(g_cv_ExtendedLogging.BoolValue)
             {
-                LogMessage("Added %s to vote.", map);
+                LogMessage("Added %s to vote (Nominated-LimitCap).", map);
             }
 
             Call_StartForward(g_fwdMapAddedToVote);
@@ -1812,7 +1812,7 @@ public int InsertNominatedMapsLimited(ArrayList voteList, int toAdd)
 
                 if(g_cv_ExtendedLogging.BoolValue)
                 {
-                    LogMessage("Added %s to vote.", map);
+                    LogMessage("Added %s to vote (Nominated-LimitRand).", map);
                 }
             }
             nomCopy.Remove(map);
@@ -1892,7 +1892,7 @@ public int InsertRandomMaps(ArrayList voteList, int toAdd)
 
         if(g_cv_ExtendedLogging.BoolValue)
         {
-            LogMessage("Added %s to vote.", map);
+            LogMessage("Added %s to vote (Random).", map);
         }
 
         maps.Erase(rand);
