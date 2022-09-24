@@ -1793,7 +1793,7 @@ public int InsertNominatedMapsLimited(ArrayList voteList, int toAdd)
             nomCopy.SetValue(map, votes);
         }
         votes = -1;
-        while(toAdd > 0 || nomCopy.Size > 0)
+        while(toAdd > 0 && nomCopy.Size > 0)
         {
             snap.GetKey(GetRandomInt(0, nomCopy.Size-1), map, sizeof(map));
 
