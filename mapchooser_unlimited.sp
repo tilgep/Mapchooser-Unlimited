@@ -2148,7 +2148,7 @@ public int Native_CanNominate(Handle plugin, int numParams)
     {
         if(g_Nominations.Size >= g_cv_Include.IntValue)
         {
-            if(ClientHasNomination(GetNativeCell(1)))
+            if(!ClientHasNomination(GetNativeCell(1)))
             {
                 return view_as<int>(CanNominate_VoteFull);
             }

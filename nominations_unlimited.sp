@@ -1042,25 +1042,25 @@ public int Handler_MapSelectMenu(Menu menu, MenuAction action, int param1, int p
 
             if((status & CanClientNom_CurrentMap) == CanClientNom_CurrentMap)
             {
-                Format(display, sizeof(display), "%s %t", map, "Menu Current Map");
+                Format(display, sizeof(display), "%s %T", map, "Menu Current Map", param1);
                 return RedrawMenuItem(display);
             }
 
             if((status & CanClientNom_CurrentNom) == CanClientNom_CurrentNom)
             {
-                Format(display, sizeof(display), "%s %t", map, "Menu Current Nom");
+                Format(display, sizeof(display), "%s %T", map, "Menu Current Nom", param1);
                 return RedrawMenuItem(display);
             }
 
             if((status & CanClientNom_Nominated) == CanClientNom_Nominated)
             {
-                Format(display, sizeof(display), "%s %t", map, "Menu Nominated");
+                Format(display, sizeof(display), "%s %T", map, "Menu Nominated", param1);
                 return RedrawMenuItem(display);
             }
 
             if((status & CanClientNom_Inserted) == CanClientNom_Inserted)
             {
-                Format(display, sizeof(display), "%s %t", map, "Menu Inserted");
+                Format(display, sizeof(display), "%s %T", map, "Menu Inserted", param1);
                 return RedrawMenuItem(display);
             }
 
@@ -1068,11 +1068,11 @@ public int Handler_MapSelectMenu(Menu menu, MenuAction action, int param1, int p
             {
                 if(g_cv_ShowCooldown.BoolValue)
                 {
-                    Format(display, sizeof(display), "%s %t", map, "Menu Cooldown", GetMapCooldown(map));
+                    Format(display, sizeof(display), "%s %T", map, "Menu Cooldown", param1, GetMapCooldown(map));
                 }
                 else
                 {
-                    Format(display, sizeof(display), "%s %t", map, "Menu Cooldown - No Value");
+                    Format(display, sizeof(display), "%s %T", map, "Menu Cooldown - No Value", param1);
                 }
                 return RedrawMenuItem(display);
             }
@@ -1080,13 +1080,13 @@ public int Handler_MapSelectMenu(Menu menu, MenuAction action, int param1, int p
             if((status & CanClientNom_NotEnoughPlayers) == CanClientNom_NotEnoughPlayers)
             {
                 int players = GetMapPlayerRestriction(map) * -1;
-                Format(display, sizeof(display), "%s %t", map, "Menu Not Enough Players", players);
+                Format(display, sizeof(display), "%s %T", map, "Menu Not Enough Players", param1, players);
                 return RedrawMenuItem(display);
             }
 
             if((status & CanClientNom_TooManyPlayers) == CanClientNom_TooManyPlayers)
             {
-                Format(display, sizeof(display), "%s %t", map, "Menu Too Many Players", GetMapPlayerRestriction(map));
+                Format(display, sizeof(display), "%s %T", map, "Menu Too Many Players", param1, GetMapPlayerRestriction(map));
                 return RedrawMenuItem(display);
             }
 
@@ -1099,13 +1099,13 @@ public int Handler_MapSelectMenu(Menu menu, MenuAction action, int param1, int p
                     hours = minutes / 60;
                     minutes = minutes % 60;
                 }
-                Format(display, sizeof(display), "%s %t", map, "Menu Time", hours, minutes);
+                Format(display, sizeof(display), "%s %T", map, "Menu Time", param1, hours, minutes);
                 return RedrawMenuItem(display);
             }
 
             if((status & CanClientNom_AdminOnly) == CanClientNom_AdminOnly)
             {
-                Format(display, sizeof(display), "%s %t", map, "Menu Admin Only");
+                Format(display, sizeof(display), "%s %T", map, "Menu Admin Only", param1);
                 return RedrawMenuItem(display);
             }
 
@@ -1114,7 +1114,7 @@ public int Handler_MapSelectMenu(Menu menu, MenuAction action, int param1, int p
                 int max = GetMapGroupRestriction(map);
                 if(max > 0)
                 {
-                    Format(display, sizeof(display), "%s %t", map, "Menu Group Max", max);
+                    Format(display, sizeof(display), "%s %T", map, "Menu Group Max", param1, max);
                     return RedrawMenuItem(display);
                 }
             }
@@ -1238,7 +1238,7 @@ public int Handler_MapInsertMenu(Menu menu, MenuAction action, int param1, int p
 
             if(IsMapInserted(map))
             {
-                Format(display, sizeof(display), "%s %t", map, "Menu Inserted");
+                Format(display, sizeof(display), "%s %T", map, "Menu Inserted", param1);
                 return RedrawMenuItem(display);
             }
 
@@ -1276,7 +1276,7 @@ public void PrepareNomlistMenu(int client)
 
     if(nomCount <= 0 && insertions <= 0)
     {
-        Format(buffer, sizeof(buffer), "%t", "Nomlist Menu No Maps");
+        Format(buffer, sizeof(buffer), "%T", "Nomlist Menu No Maps", client);
         menu.AddItem("ez", buffer, ITEMDRAW_DISABLED);
         menu.Display(client, MENU_TIME_FOREVER);
         return;
@@ -1285,7 +1285,7 @@ public void PrepareNomlistMenu(int client)
     for(int i = 0; i < insertions; i++)
     {
         GetArrayString(maps, i, buffer, sizeof(buffer));
-        Format(buffer, sizeof(buffer), "%t", "Nomlist Menu Inserted", buffer);
+        Format(buffer, sizeof(buffer), "%T", "Nomlist Menu Inserted", client, buffer);
         menu.AddItem(buffer, buffer, ITEMDRAW_DISABLED);
     }
     delete maps;
@@ -1305,7 +1305,7 @@ public void PrepareNomlistMenu(int client)
         {
             GetMapNominators(map, nominators, sizeof(nominators));
             //Only 1 nominator in limited mode
-            Format(buffer, sizeof(buffer), "%t", "Nomlist Menu Owner", map, nominators[0]);
+            Format(buffer, sizeof(buffer), "%T", "Nomlist Menu Owner", client, map, nominators[0]);
             menu.AddItem(map, buffer, ITEMDRAW_DISABLED);
             continue;
         }
@@ -1343,11 +1343,11 @@ public void PrepareNomlistMenu(int client)
 
             if(votes == 1)
             {
-                Format(buffer, sizeof(buffer), "%t", "Nomlist Menu Single Vote", map);
+                Format(buffer, sizeof(buffer), "%T", "Nomlist Menu Single Vote", client, map);
             }
             else
             {
-                Format(buffer, sizeof(buffer), "%t", "Nomlist Menu Multiple Votes", map, votes);
+                Format(buffer, sizeof(buffer), "%T", "Nomlist Menu Multiple Votes", client, map, votes);
             }
             menu.AddItem(map, buffer);
             noms.Remove(map);
@@ -1377,7 +1377,7 @@ public int Nomlist_Handler(Menu menu, MenuAction action, int param1, int param2)
 public void PrepareNominatorsMenu(int client, const char[] map)
 {
     Menu menu = CreateMenu(NominatorsMenu_Handler);
-    menu.SetTitle("%t", "Nominators Menu Title", map);
+    menu.SetTitle("%T", "Nominators Menu Title", client, map);
     menu.ExitBackButton = true;
 
     char buffer[PLATFORM_MAX_PATH];
@@ -1420,12 +1420,12 @@ public int NominatorsMenu_Handler(Menu menu, MenuAction action, int param1, int 
 public void PrepareNomStatusMenu(int client, int target)
 {
     Menu menu = CreateMenu(NomStatusMenu_Handler);
-    menu.SetTitle("%t", "NomStatus Menu Title", target);
+    menu.SetTitle("%T", "NomStatus Menu Title", client, target);
 
     char buffer[PLATFORM_MAX_PATH];
     if(!IsClientNomBanned(target))
     {
-        Format(buffer, sizeof(buffer), "%t", "Menu - Not Nombanned");
+        Format(buffer, sizeof(buffer), "%T", "Menu - Not Nombanned", client);
         menu.AddItem("b", buffer, ITEMDRAW_DISABLED);
         menu.Display(client, MENU_TIME_FOREVER);
         return;
@@ -1433,7 +1433,7 @@ public void PrepareNomStatusMenu(int client, int target)
 
     if(g_iNomBanLength[target] == NOMBAN_PERMANENT)
     {
-        Format(buffer, sizeof(buffer), "%t", "Menu - Nomban Duration", "Permanent");
+        Format(buffer, sizeof(buffer), "%T", "Menu - Nomban Duration", client, "Permanent");
         menu.AddItem(buffer, buffer, ITEMDRAW_DISABLED);
     }
     else
@@ -1457,7 +1457,7 @@ public void PrepareNomStatusMenu(int client, int target)
 
         int end = g_iNomBanStart[target] + g_iNomBanLength[target];
         FormatTime(time, sizeof(time), "%c", end);
-        Format(buffer, sizeof(buffer), "%t", "Menu - Nomban end", time);
+        Format(buffer, sizeof(buffer), "%T", "Menu - Nomban end", client, time);
         menu.AddItem(buffer, buffer, ITEMDRAW_DISABLED);
 
         int timeleftS = end - GetTime();
@@ -1470,13 +1470,13 @@ public void PrepareNomStatusMenu(int client, int target)
         else if(timeleftM > 0) Format(time, sizeof(time), "%d minutes, %d seconds", timeleftM, timeleftS%60);
         else Format(time, sizeof(time), "%d seconds", timeleftS);
 
-        Format(buffer, sizeof(buffer), "%t", "Menu - Nomban timeleft", time);
+        Format(buffer, sizeof(buffer), "%T", "Menu - Nomban timeleft", client, time);
         menu.AddItem("timeleft", buffer, ITEMDRAW_DISABLED);
 
         menu.AddItem(" ", " ", ITEMDRAW_SPACER);
     }
 
-    Format(buffer, sizeof(buffer), "%t", "Menu - Nomban Admin", g_sNomBanAdmin[client]);
+    Format(buffer, sizeof(buffer), "%T", "Menu - Nomban Admin", client, g_sNomBanAdmin[client]);
     menu.AddItem(buffer, buffer, ITEMDRAW_DISABLED);
 
     menu.Display(client, MENU_TIME_FOREVER);
@@ -1515,7 +1515,7 @@ public void PrepareNombanListMenu(int client)
 
     if(total == 0)
     {
-        Format(display, sizeof(display), "%t", "No clients nombanned");
+        Format(display, sizeof(display), "%T", "No clients nombanned", client);
         menu.AddItem("nothing", display, ITEMDRAW_DISABLED);
     }
     
@@ -1616,10 +1616,10 @@ public void UnNomBanClient(int client, int admin)
     LogAction(admin, client, "%L unnombanned %L", admin, client);
 
     Menu menu = CreateMenu(NomStatusMenu_Handler);
-    menu.SetTitle("%t", "NomStatus Menu Title");
+    menu.SetTitle("%T", "NomStatus Menu Title", client);
     menu.AddItem("s", " ", ITEMDRAW_SPACER);
 
-    Format(tag, sizeof(tag), "%t", "Menu Got UnNombanned");
+    Format(tag, sizeof(tag), "%T", "Menu Got UnNombanned", client);
     menu.AddItem("b", tag, ITEMDRAW_DISABLED);
 
     menu.Display(client, 15);
