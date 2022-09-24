@@ -1,0 +1,162 @@
+"Phrases"
+{	
+	"Prefix"
+	{
+		"es"		"{darkred}[MCU]{default}"
+	}
+
+	"Initiated Map Vote"
+	{
+		"es"		"Votación de Mapa Iniciado"
+	}
+
+	"Vote started"
+	{
+		"es"		"La votación para el siguiente mapa ha empezado."
+	}
+
+	"Runoff Vote started"
+	{
+		"es"		"La votación de desempate ha empezado."
+	}
+
+	"Nextmap Voting Finished"
+	{
+		"es"		"La votación ha finalizado. El siguiente mapa será {green}{1}{default}. (Ha recibido {2}%% de {3} votos)"
+	}
+
+	"Vote End - No Votes"
+	{
+		"es"		"¡No se han recibido votos! Establecido el siguiente mapa a {green}{1}."
+	}
+	
+	"Vote Warning"
+	{
+		"es"		"¡Atención! La votación para el siguiente mapa empezará en: {1}s"
+	}
+
+	"Revote Warning"
+	{
+		"es"		"¡Atención! La votación de desempate para el siguiente mapa empezará en: {1}s"
+	}
+
+	"Tie Vote"
+	{
+		"es"		"Los {1} mapas más votados tiene el mismo número de votos. \nSe necesita hacer una nueva votación."
+	}
+
+	"Revote is needed"
+	{
+		"es"		"Ningún mapa ha recibido más del {1}%% de las votaciones. \nSe necesita hacer una nueva votación."
+	}
+
+	"Current Map Extended"
+	{
+		"es"		"El mapa actual se ha extendido. (Recibido {1}%% de {2} votos)"
+	}
+	
+	"Current Map Stays"
+	{
+		"es"		"¡El mapa actual continua! ¡La votación ha hablado! (Recibido {1}%% de {2} votos)"
+	}
+
+	"Menu - Vote Nextmap"
+	{
+		"es"		"¡Votación para el siguiente mapa!"
+	}
+	
+	"Extend Map"
+	{
+		"es"		"Extender Mapa"
+	}
+
+	"Dont Change"
+	{
+		"es"		"No cambiar"
+	}
+
+	"Random Map"
+	{
+		"es"		"Mapa Aleatorio"
+	}
+
+	"Map was not found"
+	{
+		"es"		"Mapa '{1}' no encontrado."
+	}
+
+	"Setnextmap Usage"
+	{
+		"es"		"Uso: sm_setnextmap <mapa|_random>"
+	}
+
+	"Changed Next Map"
+	{
+		"es"		"Cambiado el siguiente mapa a \"{1}\"."
+	}
+
+	"Config reload successful"
+	{
+		"es"		"Se ha recargado la configuración correctamente."
+	}
+
+	"Config reload unsuccessful"
+	{
+		"es"		"No se ha recargado correctamente la config. Revisa los detalles en los logs."
+	}
+
+	"Maplist reload successful"
+	{
+		"es"		"Lista de mapas recargada correctamente."
+	}
+
+	"Maplist reload unsuccessful"
+	{
+		"es"		"No se ha cargado correctamente la lista de mapas. Revisa los detalles en los logs."
+	}
+
+	"Exclude Map Usage"
+	{
+		"es"		"Uso: sm_excludemap <mapa> [valor] (Se usará el valor de la Configuración si no se especifica)"
+	}
+
+	"Exclude Map Set"
+	{
+		"es"		"Establecido el cooldown de '{1}' a {2}."
+	}
+
+	"Exclude Map Value Error"
+	{
+		"es"		"El valor tiene que ser mayor a 0."
+	}
+
+	"Extends Left"
+	{
+		"es"		"Extensiones usadas: {1}/{2} ({3} restantes)"
+	}
+
+	"Clear cooldown usage"
+	{
+		"es"		"Uso: sm_clearcd <mapa>"
+	}
+
+	"Map not on cooldown"
+	{
+		"es"		"Mapa {1} no está en el cooldown actualmente."
+	}
+
+	"Map cooldown cleared"
+	{
+		"es"		"Cooldown limpiado para {green}{1}"
+	}
+
+	"Nominated by"
+	{
+		"es"		"Nominado por:"
+	}
+
+	"Noone"
+	{
+		"es"		"Nadie"
+	}
+}
