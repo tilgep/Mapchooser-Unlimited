@@ -1,0 +1,429 @@
+"Phrases"
+{
+	"NPrefix"
+	{
+		"ko"		"{green}[NU]{default}"
+	}
+
+	"Player Nominated"
+	{
+		"ko"		"{lightgreen}{1}{default}님이 {green}{2}을 추천했습니다"
+	}
+
+	"Player Nominated Replaced"
+	{
+		"ko"		"{lightgreen}{1}{default}님이 추천 맵을 {green}{2}으로 변경했습니다"
+	}
+
+	"Player Nominated Single"
+	{
+		"ko"		"{lightgreen}{1}{default}님이 {green}{2}{default}을 추천했습니다 [1명 추천]"
+	}
+
+	"Player Nominated Multiple"
+	{
+		"ko"		"{lightgreen}{1}{default}님이 {green} {2}{default}을 추천했습니다 [{3}명 추천]"
+	}
+
+	"Player Nominated Single Replaced"
+	{
+		"ko"		"{lightgreen}{1}{default}님이 추천 맵을 {green}{2}{default}으로 변경했습니다 [1명 추천]"
+	}
+
+	"Player Nominated Multiple Replaced"
+	{
+		"ko"		"{lightgreen}{1}{default}님이 추천 맵을 {green}{2}{default}으로 변경했습니다 [{3}명 추천]"
+	}
+
+	"Client Nominated Single"
+	{
+		"ko"		"{green}{1}{default}을 추천했습니다 [1명 추천]"
+	}
+
+	"Client Nominated Multiple"
+	{
+		"ko"		"{green}{1}{default}을 추천했습니다 [{2}명 추천]"
+	}
+
+	"Client Nominated Single Replaced"
+	{
+		"ko"		"추천 맵을 {green}{1}{default}으로 변경했습니다 [1명 추천]"
+	}
+
+	"Client Nominated Multiple Replaced"
+	{
+		"ko"		"추천 맵을 {green}{1}{default}으로 변경했습니다 [{2}명 추천]"
+	}
+	
+	"Current map"
+	{
+		"ko"		"현 맵을 추천할 수 없습니다!"
+	}
+
+	"Current nomination"
+	{
+		"ko"		"'{1}'을 이미 추천했습니다!"
+	}
+
+	"Already Inserted"
+	{
+		"ko"		"어드민이 다음 맵 투표에 '{1}'을 추가했습니다!"
+	}
+
+	"Already Nominated"
+	{
+		"ko"		"'{1}'은 이미 추천되었습니다!"
+	}
+
+	"Admin Only Nominating"
+	{
+		"ko"		"'{1}'은 어드민만 추천할 수 있습니다!"
+	}
+
+	"Map is on cooldown"
+	{
+		"ko"		"'{1}'은 {2}맵 후에 추천될 수 있습니다."
+	}
+
+	"Map is on cooldown - No Value"
+	{
+		"ko"		"'{1}'은 최근에 플레이 하였으므로 추천할 수 없습니다."
+	}
+
+	"Map needs more players"
+	{
+		"ko"		"'{1}'을 추천하려면 플레이어 수 {2}명이 더 필요합니다!"
+	}
+
+	"Map needs fewer players"
+	{
+		"ko"		"'{1}'을 추천하려면 플레이어 수 {2}명이 덜 필요합니다!"
+	}
+
+	"Nominate Time Restriction - Hours"
+	{
+		"ko"		"'{1}'은 {2}시간 {3}분 후 추천할 수 있습니다."
+	}
+
+	"Nominate Time Restriction - Minutes"
+	{
+		"ko"		"'{1}'은 {2}분 후 추천할 수 있습니다."
+	}
+
+	"Error Nominating"
+	{
+		"ko"		"'{1}'을 추천하는데 오류가 발생했습니다"
+	}
+
+	"Error Inserting"
+	{
+		"ko"		"'{1}'을 추가하는데 오류가 발생했습니다"
+	}
+
+	"Nominate Menu Title"
+	{
+		"ko"		"추천할 맵을 고르세요"
+	}
+
+	"Menu Current Map"
+	{
+		"ko"		"[현 맵]"
+	}
+
+	"Menu Current Nom"
+	{
+		"ko"		"[추천한 맵]"
+	}
+
+	"Menu Nominated"
+	{
+		"ko"		"[추천된 맵]"
+	}
+
+	"Menu Inserted"
+	{
+		"ko"		"[추가된 맵]"
+	}
+
+	"Menu Cooldown"
+	{
+		"ko"		"[쿨다운: {1}맵]"
+	}
+
+	"Menu Cooldown - No Value"
+	{
+		"ko"		"[최근에 플레이한 맵]"
+	}
+
+	"Menu Not Enough Players"
+	{
+		"ko"		"[+{1}명 필요]"
+	}
+
+	"Menu Too Many Players"
+	{
+		"ko"		"[-{1}명 필요]"
+	}
+
+	"Menu Time"
+	{
+		"ko"		"[{1}시간 {2}분 후]"
+	}
+
+	"Menu Admin Only"
+	{
+		"ko"		"[어드민 전용]"
+	}
+
+	"Menu Group Max"
+	{
+		"ko"		"[그룹 최대치: {1}]"
+	}
+
+	"Insert Menu Title"
+	{
+		"ko"		"추가할 맵을 고르세요"
+	}
+
+	"Map inserted"
+	{
+		"ko"		"{lightgreen}{1}{default}님이 맵 투표에 {green}{2}{default}을 추가했습니다."
+	}
+
+	"Nominating not unlocked"
+	{
+		"ko"		"맵 추천은 {1}초 후에 가능합니다."
+	}
+
+	"Wait to nominate"
+	{
+		"ko"		"{1}초 기다린 후 다시 추천하세요."
+	}
+
+	"Cannot Nominate - Vote Complete"
+	{
+		"ko"		"다음 맵이 이미 투표되었습니다."
+	}
+
+	"Cannot Nominate - Vote In Progress"
+	{
+		"ko"		"다음 맵 투표가 진행 중입니다. 지금은 맵을 추천할 수 없습니다."
+	}
+
+	"Cannot Nominate - Vote Full"
+	{
+		"ko"		"추천 맵 리스트가 최대치를 도달했습니다! 더 추천할 수 없습니다."
+	}
+
+	"Cannot insert - Vote In Progress"
+	{
+		"ko"		"다음 맵 투표가 진행 중입니다. 지금은 맵을 추가할 수 없습니다."
+	}
+
+	"Nomination Removed - UnNominated"
+	{
+		"ko"		"{green}{1}을 더이상 추천하지 않습니다"
+	}
+	
+	"Nomination Removed - Not Enough Players"
+	{
+		"ko"		"추천 맵 {green}{1}{default}이 플레이어 수 한계를 미달한 이유로 삭제되었습니다."
+	}
+	
+	"Nomination Removed - Too Many Players"
+	{
+		"ko"		"추천 맵 {green}{1}{default}이 플레이어 수 한계를 초과한 이유로 삭제되었습니다."
+	}
+	
+	"Nomination Removed - Time"
+	{
+		"ko"		"추천 맵 {green}{1}{default}이 현 시간에 금지된 이유로 삭제되었습니다."
+	}
+
+	"Unable To Unnominate"
+	{
+		"ko"		"아직 맵을 추천하지 않았습니다."
+	}
+	
+	"Unable To Unnominate Admin"
+	{
+		"ko"		"{lightgreen}{1}{default}님은 아직 맵을 추천하지 않았습니다."
+	}
+
+	"Nomlist Menu Title"
+	{
+		"ko"		"추천된 맵"
+	}
+
+	"Nomlist Menu No Maps"
+	{
+		"ko"		"어떠한 맵도 추천되지 않았습니다."
+	}
+	
+	"Nomlist Menu Inserted"
+	{
+		"ko"		"{1} [어드민]"
+	}
+	
+	"Nomlist Menu Single Vote"
+	{
+		"ko"		"{1} [1명 추천]"
+	}
+	
+	"Nomlist Menu Multiple Votes"
+	{
+		"ko"		"{1} [{2}명 추천]"
+	}
+	
+	"Nomlist Menu Owner"
+	{
+		"ko"		"{1} [{2}]"
+	}
+	
+	"NombanList Client Not Valid"
+	{
+		"ko"		"그 유저는 더이상 유효하지 않습니다."
+	}
+
+	"Nominators Menu Title"
+	{
+		// 1: Map name
+		"ko"		"{1}명 추천"
+	}
+
+	"NomStatus Menu Title"
+	{
+		"ko"		"'{1}'의 맵 추천 제한 상태"
+	}
+
+	"Menu - Not Nombanned"
+	{
+		"ko"		"제한되지 않음"
+	}
+
+	"Menu - Nomban Duration"
+	{
+		"ko"		"기간: {1}"
+	}
+
+	"Menu - Nomban end"
+	{
+		"ko"		"종료일: {1}"
+	}
+
+	"Menu - Nomban timeleft"
+	{
+		"ko"		"남은 시간: {1}"
+	}
+
+	"Menu - Nomban Admin"
+	{
+		"ko"		"어드민: {1}"
+	}
+
+	"UnInsert Usage"
+	{
+		"ko"		"사용도: sm_uninsert <맵>"
+	}
+
+	"Map Uninserted"
+	{
+		"ko"		"{lightgreen}{1}{default}님이 {green}{2}{default}을 다음 맵 투표에서 삭제했습니다."
+	}
+
+	"Failed to uninsert"
+	{
+		"ko"		"'{1}'을 추천 맵 리스트에서 삭제 실패했습니다."
+	}
+
+	"RemoveNom Usage"
+	{
+		"ko"		"사용도: sm_removenom <타겟>"
+	}
+
+	"Nomination Removed - Admin Removed"
+	{
+		"ko"		"어드민이 유저의 추천 맵 {green}{1}을 삭제했습니다"
+	}
+
+	"Nomban usage"
+	{
+		"ko"		"사용도: sm_nomban <타겟> <기간 (분)>"
+	}
+
+	"Already nombanned"
+	{
+		"#format"	"{1:N}"
+		"ko"		"{1}님은 이미 맵 추천 제한돼있습니다!"
+	}
+
+	"Nombanned permanent"
+	{
+		"ko"		"{1}님을 영구적으로 맵 추천 제한했습니다."
+	}
+
+	"Nominating Disabled"
+	{
+		"ko"		"어드민이 맵 추천을 제한했습니다."
+	}
+
+	"Nominating already disabled"
+	{
+		"ko"		"맵 추천은 이미 제한돼있습니다."
+	}
+
+	"Nominating Enabled"
+	{
+		"ko"		"어드민이 맵 추천을 허용했습니다."
+	}
+
+	"Nominating already enabled"
+	{
+		"ko"		"맵 추천은 이미 허용됐습니다."
+	}
+
+	"Cannot nominate - Nombanned"
+	{
+		"ko"		"유저의 맵 추천 자격이 제한되었기 때문에 추천할 수 없습니다. {green}!nomstatus{default}을 이용해 더 알아보세요."
+	}
+
+	"Nombanned"
+	{
+		"ko"		"{1}님을 {2}분 동안 맵 추천 제한했습니다."
+	}
+
+	"Nomination removed on nomban"
+	{
+		"ko"		"유저의 맵 추천 자격이 제한되었기 때문에 추천한 맵이 삭제되었습니다."
+	}
+
+	"UnNomban usage"
+	{
+		"ko"		"사용도: sm_unnomban <타겟>"
+	}
+
+	"Already not nombanned"
+	{
+		"ko"		"{1}님은 이미 맵 추천 제한되어 있지 않습니다!"
+	}
+
+	"UnNombanned"
+	{
+		"ko"		"{1}님의 맵 추천 자격이 허용됐습니다"
+	}
+
+	"Menu Got UnNombanned"
+	{
+		"ko"		"유저의 맵 추천 자격이 허용되었습니다."
+	}
+
+	"Cookies are not cached"
+	{
+		"ko"		"쿠키가 로딩되지 않았습니다. 잠시만 기달려주세요."
+	}
+
+	"Can only use command in game"
+	{
+		"ko"		"이 명령어는 게임 내에서만 사용할 수 있습니다."
+	}
+}

@@ -1,0 +1,162 @@
+"Phrases"
+{	
+	"Prefix"
+	{
+		"ko"		"{darkred}[MCU]{default}"
+	}
+
+	"Initiated Map Vote"
+	{
+		"ko"		"맵 투표를 시작했습니다"
+	}
+
+	"Vote started"
+	{
+		"ko"		"다음 맵 투표를 시작했습니다."
+	}
+
+	"Runoff Vote started"
+	{
+		"ko"		"다음 맵 재투표를 시작했습니다."
+	}
+
+	"Nextmap Voting Finished"
+	{
+		"ko"		"맵 투표가 끝났습니다. 다음 맵은 {green}{1}{default}입니다. ({3} 총득표 중 {2}%% 획득)"
+	}
+
+	"Vote End - No Votes"
+	{
+		"ko"		"아무도 투표하지 않았습니다! 다음 맵을 {green}{1}으로 정합니다."
+	}
+	
+	"Vote Warning"
+	{
+		"ko"		"경고! 다음 맵 투표가 {1}초 후 시작됩니다"
+	}
+
+	"Revote Warning"
+	{
+		"ko"		"경고! 다음 맵 재투표가 {1}초 후 시작됩니다"
+	}
+
+	"Tie Vote"
+	{
+		"ko"		"맵 {1}개가 동일한 득표를 얻었습니다. \nA 재투표가 필요합니다."
+	}
+
+	"Revote is needed"
+	{
+		"ko"		"어떤한 맵도 {1}%%이상의 득표율을 획득하지 못했습니다. \nA 재투표가 필요합니다."
+	}
+
+	"Current Map Extended"
+	{
+		"ko"		"현 맵이 연장되었습니다. ({2} 총득표 중 {1}%% 획득)"
+	}
+	
+	"Current Map Stays"
+	{
+		"ko"		"투표 결과가 나왔습니다! 현 맵이 계속됩니다! ({2} 총득표 중 {1}%% 획득)"
+	}
+
+	"Menu - Vote Nextmap"
+	{
+		"ko"		"다음 맵을 투표하세요!"
+	}
+	
+	"Extend Map"
+	{
+		"ko"		"현 맵 연장하기"
+	}
+
+	"Dont Change"
+	{
+		"ko"		"바꾸지 않기"
+	}
+
+	"Random Map"
+	{
+		"ko"		"무작정 맵 고르기"
+	}
+
+	"Map was not found"
+	{
+		"ko"		"'{1}'이 발견되지 않았습니다."
+	}
+
+	"Setnextmap Usage"
+	{
+		"ko"		"사용도: sm_setnextmap <맵|_random>"
+	}
+
+	"Changed Next Map"
+	{
+		"ko"		"다음 맵을 \"{1}\"으로 바꿨습니다."
+	}
+
+	"Config reload successful"
+	{
+		"ko"		"컨피그를 정상적으로 리로딩 했습니다."
+	}
+
+	"Config reload unsuccessful"
+	{
+		"ko"		"컨피그를 정상적으로 리로딩하지 못했습니다. 로그를 참고하세요."
+	}
+
+	"Maplist reload successful"
+	{
+		"ko"		"맵 리스트를 정상적으로 리로딩 했습니다."
+	}
+
+	"Maplist reload unsuccessful"
+	{
+		"ko"		"맵 리스트를 정상적으로 리로딩하지 못했습니다. 로그를 참고하세요."
+	}
+
+	"Exclude Map Usage"
+	{
+		"ko"		"사용도: sm_excludemap <맵> [숫자] (숫자가 명시되지 않을 시 컨피그 숫자를 이용합니다)"
+	}
+
+	"Exclude Map Set"
+	{
+		"ko"		"'{1}'의 쿨다운을 {2} 세트로 정합니다."
+	}
+
+	"Exclude Map Value Error"
+	{
+		"ko"		"입력한 숫자는 0 초과여야 합니다."
+	}
+
+	"Extends Left"
+	{
+		"ko"		"사용한 연장: {1}/{2} ({3} 남음)"
+	}
+
+	"Clear cooldown usage"
+	{
+		"ko"		"사용도: sm_clearcd <맵>"
+	}
+
+	"Map not on cooldown"
+	{
+		"ko"		"{1}은 현제 쿨다운이 없습니다."
+	}
+
+	"Map cooldown cleared"
+	{
+		"ko"		"{green}{1}의 쿨다운을 제거합니다"
+	}
+
+	"Nominated by"
+	{
+		"ko"		"추천자:"
+	}
+
+	"Noone"
+	{
+		"ko"		"아무도 없음"
+	}
+}
