@@ -1,0 +1,162 @@
+"Phrases"
+{	
+	"Prefix"
+	{
+		"pl"		"{darkred}[MCU]{default}"
+	}
+
+	"Initiated Map Vote"
+	{
+		"pl"		"Rozpoczęto głosowanie na mapę"
+	}
+
+	"Vote started"
+	{
+		"pl"		"Rozpoczęto głosowanie na następną mapę."
+	}
+
+	"Runoff Vote started"
+	{
+		"pl"		"Rozpoczęto powtórne głosowanie na następną mapę."
+	}
+
+	"Nextmap Voting Finished"
+	{
+		"pl"		"Głosowanie na mapę zakończone. Następną mapą będzie {green}{1}{default}. (Otrzymała {2}%% of {3} votes)"
+	}
+
+	"Vote End - No Votes"
+	{
+		"pl"		"Brak głosów! Ustawiono następną mapę na {green}{1}."
+	}
+	
+	"Vote Warning"
+	{
+		"pl"		"Uwaga! Głosowanie na następną mapę rozpocznie się za: {1}s"
+	}
+
+	"Revote Warning"
+	{
+		"pl"		"Uwaga! Powtórne głosowanie rozpocznie się za: {1}s"
+	}
+
+	"Tie Vote"
+	{
+		"pl"		"{1} najpopularniejsze mapy mają taką samą liczbę głosów. Potrzebne powtórne głosowanie."
+	}
+
+	"Revote is needed"
+	{
+		"pl"		"Żadna mapa nie otrzymała więcej niż {1}%% głosów. Potrzebne powtórne głosowanie."
+	}
+
+	"Current Map Extended"
+	{
+		"pl"		"Bieżąca mapa została przedłużona. (Otrzymała {1}%% z {2} głosów)"
+	}
+	
+	"Current Map Stays"
+	{
+		"pl"		"Kontynuawno bieżącą mapę! Głos przemówił! (Otrzymała {1}%% z {2} głosów)"
+	}
+
+	"Menu - Vote Nextmap"
+	{
+		"pl"		"Głosuj na następną mapę!"
+	}
+	
+	"Extend Map"
+	{
+		"pl"		"Przedłuż mapę"
+	}
+
+	"Dont Change"
+	{
+		"pl"		"Nie zmieniaj"
+	}
+
+	"Random Map"
+	{
+		"pl"		"Losowa mapa"
+	}
+
+	"Map was not found"
+	{
+		"pl"		"Nie znaleziono mapy '{1}'."
+	}
+
+	"Setnextmap Usage"
+	{
+		"pl"		"Użycie: sm_setnextmap <mapa|_random>"
+	}
+
+	"Changed Next Map"
+	{
+		"pl"		"Zmieniono następną mapę na \"{1}\"."
+	}
+
+	"Config reload successful"
+	{
+		"pl"		"Pomyślnie przeładowano konfigurację."
+	}
+
+	"Config reload unsuccessful"
+	{
+		"pl"		"Nie udało się przeładować konfiguracji. Zobacz logi po więcej szczegółów."
+	}
+
+	"Maplist reload successful"
+	{
+		"pl"		"Pomyślnie przeładowano listę map."
+	}
+
+	"Maplist reload unsuccessful"
+	{
+		"pl"		"Nie udało się przeładować listy map. Zobacz logi po więcej szczegółów."
+	}
+
+	"Exclude Map Usage"
+	{
+		"pl"		"Użycie: sm_excludemap <mapa> [wartość] (Wartość wzięta z konfiguracji jeżeli jej nie podano)"
+	}
+
+	"Exclude Map Set"
+	{
+		"pl"		"Ustawiono czas odnowienia mapy '{1}' na {2}."
+	}
+
+	"Exclude Map Value Error"
+	{
+		"pl"		"Podana wartość musi być większa niż 0."
+	}
+
+	"Extends Left"
+	{
+		"pl"		"Użyte przedłużenia: {1}/{2} (pozostały {3})"
+	}
+
+	"Clear cooldown usage"
+	{
+		"pl"		"Użycie: sm_clearcd <mapa>"
+	}
+
+	"Map not on cooldown"
+	{
+		"pl"		"Mapa {1} nie jest obecnie w czasie odnowienia."
+	}
+
+	"Map cooldown cleared"
+	{
+		"pl"		"Wyczyszczono czas odnowienia dla {green}{1}"
+	}
+
+	"Nominated by"
+	{
+		"pl"		"Nominowana przez:"
+	}
+
+	"Noone"
+	{
+		"pl"		"Nikt"
+	}
+}

@@ -1,0 +1,427 @@
+"Phrases"
+{
+	"NPrefix"
+	{
+		"pl"		"{green}[NU]{default}"
+	}
+
+	"Player Nominated"
+	{
+		"pl"		"{lightgreen}{1}{default} nominuje {green}{2}"
+	}
+
+	"Player Nominated Replaced"
+	{
+		"pl"		"{lightgreen}{1}{default} zmienił swoją nominację na {green}{2}"
+	}
+
+	"Player Nominated Single"
+	{
+		"pl"		"{lightgreen}{1}{default} nominuje {green}{2}{default} [1 głos]"
+	}
+
+	"Player Nominated Multiple"
+	{
+		"pl"		"{lightgreen}{1}{default} nominuje {green} {2}{default} [{3} głosy]"
+	}
+
+	"Player Nominated Single Replaced"
+	{
+		"pl"		"{lightgreen}{1}{default} zmienił swoją nominację na {green}{2}{default} [1 głos]"
+	}
+
+	"Player Nominated Multiple Replaced"
+	{
+		"pl"		"{lightgreen}{1}{default} zmienił swoją nominację na {green}{2}{default} [{3} głosy]"
+	}
+
+	"Client Nominated Single"
+	{
+		"pl"		"Nominowałeś {green}{1}{default} [1 głos]"
+	}
+
+	"Client Nominated Multiple"
+	{
+		"pl"		"Nominowałeś {green}{1}{default} [{2} głosy]"
+	}
+
+	"Client Nominated Single Replaced"
+	{
+		"pl"		"Zmieniasz swoją nominację na {green}{1}{default} [1 głos]"
+	}
+
+	"Client Nominated Multiple Replaced"
+	{
+		"pl"		"Zmieniasz swoją nominację na {green}{1}{default} [{2} głosy]"
+	}
+	
+	"Current map"
+	{
+		"pl"		"Nie możesz nominować bieżącej mapy!"
+	}
+
+	"Current nomination"
+	{
+		"pl"		"Już nominowałeś '{1}'"
+	}
+
+	"Already Inserted"
+	{
+		"pl"		"Administrator już wstawił '{1}' do następnego głosowania!"
+	}
+
+	"Already Nominated"
+	{
+		"pl"		"'{1}' już była nominowana!"
+	}
+
+	"Admin Only Nominating"
+	{
+		"pl"		"'{1}' może być nominowana tylko przez administrację!"
+	}
+
+	"Map is on cooldown"
+	{
+		"pl"		"'{1}' może być nominowana po rozegraniu {2} więcej map."
+	}
+
+	"Map is on cooldown - No Value"
+	{
+		"pl"		"'{1}' była ostatnio grana i nie może być nominowana."
+	}
+
+	"Map needs more players"
+	{
+		"pl"		"'{1}' wymaga {2} więcej graczy zanim możesz ją nominować!"
+	}
+
+	"Map needs fewer players"
+	{
+		"pl"		"'{1}' wymaga {2} mniej graczy zanim możesz ją nominować!"
+	}
+
+	"Nominate Time Restriction - Hours"
+	{
+		"pl"		"'{1}' może być nominowana za {2} godziny i {3} minut."
+	}
+
+	"Nominate Time Restriction - Minutes"
+	{
+		"pl"		"'{1}' może być nominowana za {2} minut."
+	}
+
+	"Error Nominating"
+	{
+		"pl"		"Napotkano błąd przy nominowaniu '{1}'"
+	}
+
+	"Error Inserting"
+	{
+		"pl"		"Napotkano błąd przy wstawianiu '{1}'"
+	}
+
+	"Nominate Menu Title"
+	{
+		"pl"		"Wybierz mapę do nominowania"
+	}
+
+	"Menu Current Map"
+	{
+		"pl"		"[Bieżąca mapa]"
+	}
+
+	"Menu Current Nom"
+	{
+		"pl"		"[Twoja nominacja]"
+	}
+
+	"Menu Nominated"
+	{
+		"pl"		"[Nominowana]"
+	}
+
+	"Menu Inserted"
+	{
+		"pl"		"[Wstawiona]"
+	}
+
+	"Menu Cooldown"
+	{
+		"pl"		"[Czas odnawiania: {1} map]"
+	}
+
+	"Menu Cooldown - No Value"
+	{
+		"pl"		"[Ostatnio rozegrana]"
+	}
+
+	"Menu Not Enough Players"
+	{
+		"pl"		"[Wymaga +{1} graczy]"
+	}
+
+	"Menu Too Many Players"
+	{
+		"pl"		"[Wymaga -{1} graczy]"
+	}
+
+	"Menu Time"
+	{
+		"pl"		"[Czekaj {1}H {2}M]"
+	}
+
+	"Menu Admin Only"
+	{
+		"pl"		"[Tylko dla administracji]"
+	}
+
+	"Menu Group Max"
+	{
+		"pl"		"[Grupa Max: {1}]"
+	}
+
+	"Insert Menu Title"
+	{
+		"pl"		"Wybierz mapę do wstawienia"
+	}
+
+	"Map inserted"
+	{
+		"pl"		"{lightgreen}{1}{default} wstawił {green}{2}{default} do głosowania."
+	}
+
+	"Nominating not unlocked"
+	{
+		"pl"		"Nominację zostaną odblokowane za {1} sekund."
+	}
+
+	"Wait to nominate"
+	{
+		"pl"		"Musisz odczekać {1} sekund zanim możesz ponownie nominować."
+	}
+
+	"Cannot Nominate - Vote Complete"
+	{
+		"pl"		"Następna mapa została już wybrana."
+	}
+
+	"Cannot Nominate - Vote In Progress"
+	{
+		"pl"		"Odbywa się głosowanie na mapę. Nie możesz teraz nominować."
+	}
+
+	"Cannot Nominate - Vote Full"
+	{
+		"pl"		"Lista nominacji jest pełna! Nie możesz nominować."
+	}
+
+	"Cannot insert - Vote In Progress"
+	{
+		"pl"		"Odbywa się głosowanie na mapę. Nie możesz teraz wstawiać map."
+	}
+
+	"Nomination Removed - UnNominated"
+	{
+		"pl"		"Usunąłeś swoją nominację mapy {green}{1}"
+	}
+	
+	"Nomination Removed - Not Enough Players"
+	{
+		"pl"		"Twoja nominacja mapy {green}{1}{default} została usunięta z powodu braku wymaganej liczby graczy."
+	}
+	
+	"Nomination Removed - Too Many Players"
+	{
+		"pl"		"Twoja nominacja mapy {green}{1}{default} została usunięta z powodu przekoczenia dozwolonej liczby graczy."
+	}
+	
+	"Nomination Removed - Time"
+	{
+		"pl"		"Twoja nominacja mapy {green}{1}{default} została usunięta ponieważ nie jest dozwolona o tej godzinie."
+	}
+
+	"Unable To Unnominate"
+	{
+		"pl"		"Nie nominowałeś żadnej mapy."
+	}
+	
+	"Unable To Unnominate Admin"
+	{
+		"pl"		"{lightgreen}{1}{default} Nie nominował żadnej mapy."
+	}
+
+	"Nomlist Menu Title"
+	{
+		"pl"		"Nominowane mapy"
+	}
+
+	"Nomlist Menu No Maps"
+	{
+		"pl"		"Brak nominowanych map."
+	}
+	
+	"Nomlist Menu Inserted"
+	{
+		"pl"		"{1} [Administrator]"
+	}
+	
+	"Nomlist Menu Single Vote"
+	{
+		"pl"		"{1} [1 głos]"
+	}
+	
+	"Nomlist Menu Multiple Votes"
+	{
+		"pl"		"{1} [{2} głosy]"
+	}
+	
+	"Nomlist Menu Owner"
+	{
+		"pl"		"{1} [{2}]"
+	}
+	
+	"NombanList Client Not Valid"
+	{
+		"pl"		"Ten klient nie jest już prawidłowy."
+	}
+
+	"Nominators Menu Title"
+	{
+		"pl"		"{1} nominujący"
+	}
+
+	"NomStatus Menu Title"
+	{
+		"pl"		"Kara na nominowanie dla: {1}"
+	}
+
+	"Menu - Not Nombanned"
+	{
+		"pl"		"Nie ukarany na nominowanie"
+	}
+
+	"Menu - Nomban Duration"
+	{
+		"pl"		"Długość: {1}"
+	}
+
+	"Menu - Nomban end"
+	{
+		"pl"		"Data upłynięcia: {1}"
+	}
+
+	"Menu - Nomban timeleft"
+	{
+		"pl"		"Pozostały czas: {1}"
+	}
+
+	"Menu - Nomban Admin"
+	{
+		"pl"		"Administrator: {1}"
+	}
+
+	"UnInsert Usage"
+	{
+		"pl"		"Użycie: sm_uninsert <mapa>"
+	}
+
+	"Map Uninserted"
+	{
+		"pl"		"{lightgreen}{1}{default} usunął {green}{2}{default} z głosowania na następną mapę."
+	}
+
+	"Failed to uninsert"
+	{
+		"pl"		"Nie udało się usunąć '{1}' z listy nominacji."
+	}
+
+	"RemoveNom Usage"
+	{
+		"pl"		"Użycie: sm_removenom <cel>"
+	}
+
+	"Nomination Removed - Admin Removed"
+	{
+		"pl"		"Administrator usunął twoją nominację mapy {green}{1}"
+	}
+
+	"Nomban usage"
+	{
+		"pl"		"Użycie: sm_nomban <cel> <długość (w minutach)>"
+	}
+
+	"Already nombanned"
+	{
+		"pl"		"{1} już jest ukarany na nominowanie!"
+	}
+
+	"Nombanned permanent"
+	{
+		"pl"		"Ukarany na nominowanie {1} na stałe."
+	}
+
+	"Nominating Disabled"
+	{
+		"pl"		"Administrator wyłączył nominowanie."
+	}
+
+	"Nominating already disabled"
+	{
+		"pl"		"Nominowanie jest już wyłączone."
+	}
+
+	"Nominating Enabled"
+	{
+		"pl"		"Administrator włączył nominowanie."
+	}
+
+	"Nominating already enabled"
+	{
+		"pl"		"Nominowanie jest już włączone."
+	}
+
+	"Cannot nominate - Nombanned"
+	{
+		"pl"		"Nie możesz nominować map ponieważ zostałeś ukarany na nominowanie. Użyj {green}!nomstatus{default} po więcej informacji."
+	}
+
+	"Nombanned"
+	{
+		"pl"		"Ukarano {1} na nominowanie na {2} minut."
+	}
+
+	"Nomination removed on nomban"
+	{
+		"pl"		"Twoja nominacja została usunięta ponieważ zostałeś ukarany na nominowanie."
+	}
+
+	"UnNomban usage"
+	{
+		"pl"		"Użycie: sm_unnomban <cel>"
+	}
+
+	"Already not nombanned"
+	{
+		"pl"		"{1} nie jest już ukarany na nominowanie!"
+	}
+
+	"UnNombanned"
+	{
+		"pl"		"Zdjęto karę na nominowanie z {1}"
+	}
+
+	"Menu Got UnNombanned"
+	{
+		"pl"		"Twoja kara na nominowanie została zdjęta."
+	}
+
+	"Cookies are not cached"
+	{
+		"pl"		"Ciasteczka nie zostały jeszcze wczytane. Proszę czekać."
+	}
+
+	"Can only use command in game"
+	{
+		"pl"		"Tą komendę możesz użyć tylko w grze."
+	}
+}
