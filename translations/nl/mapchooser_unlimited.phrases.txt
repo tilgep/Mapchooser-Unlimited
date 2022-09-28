@@ -1,0 +1,163 @@
+"Phrases"
+{	
+	"Prefix"
+	{
+		"nl"		"{darkred}[MCU]{default}"
+	}
+
+	"Initiated Map Vote"
+	{
+		"nl"		"Beginnen met stemmen."
+	}
+
+	"Vote started"
+	{
+		"nl"		"Stemmen voor de volgende map is begonnen."
+	}
+
+	"Runoff Vote started"
+	{
+		"nl"		"Volgende stemronde is begonnen."
+	}
+
+	"Nextmap Voting Finished"
+	{
+		"nl"		"Stemmen is voltooid. De volgende map wordt {green}{1}{default}. (Ontvangen {2}%% van de {3} stemmen)"
+	}
+
+	"Vote End - No Votes"
+	{
+		"nl"		"Geen stemmen ontvangen! Volgende map verandard naar {green}{1}."
+	}
+	
+	"Vote Warning"
+	{
+		"nl"		"Let op! Stemmen voor de volgende map begint over: {1}s"
+	}
+
+	"Revote Warning"
+	{
+		"nl"		"Let op! De aankomende stemronde begint over: {1}s"
+	}
+
+	"Tie Vote"
+	{
+		"nl"		"De top {1} mappen hebben het dezelfde aantal stemmen. \nEen herstemming is nodig."
+	}
+
+	"Revote is needed"
+	{
+		"nl"		"Geen enkele map heeft meer dan {1}%% van de stemmen ontvangen. \nEen herstemming is nodig."
+	}
+
+	"Current Map Extended"
+	{
+		"nl"		"De huidige map is zojuist verlengd. (Ontvangen {1}%% van de {2} stemmen)"
+	}
+	
+	"Current Map Stays"
+	{
+		"nl"		"We gaan door met de huidige map! The stemming heeft gesproken! (Ontvangen {1}%% van de {2} stemmen)"
+	}
+
+	"Menu - Vote Nextmap"
+	{
+		"nl"		"Stem voor de volgende map!"
+	}
+	
+	"Extend Map"
+	{
+		"nl"		"Verleng map"
+	}
+
+	"Dont Change"
+	{
+		"nl"		"Map niet veranderen"
+	}
+
+	"Random Map"
+	{
+		"nl"		"Selecteer een willekeurige map"
+	}
+
+	"Map was not found"
+	{
+		"nl"		"Map '{1}' bestaat niet."
+	}
+
+	"Setnextmap Usage"
+	{
+		"nl"		"Gebruik: sm_setnextmap <map|_random>"
+	}
+
+	"Changed Next Map"
+	{
+		"nl"		"Volgende map veranderd naar \"{1}\"."
+	}
+
+	"Config reload successful"
+	{
+		"nl"		"Configuratie met succes herladen."
+	}
+
+	"Config reload unsuccessful"
+	{
+		"nl"		"Configuratie zonder succes herladen. Bekijklogboek voor meer details."
+	}
+
+	"Maplist reload successful"
+	{
+		"nl"		"Lijst met mappen zonder succes herladen."
+	}
+
+	"Maplist reload unsuccessful"
+	{
+		"nl"		"Lijst met mappen zonder succes herladen. Bekijk logboek voor meer details."
+	}
+
+	"Exclude Map Usage"
+	{
+		"nl"		"Uitsluiding van: sm_excludemap <map> [value] (Configuratie waarde wordt gebruikt als dit niet gespecificeerd is.)"
+	}
+
+	"Exclude Map Set"
+	{
+		"nl"		"Veranderd de wachttijd voor de map '{1}' naar {2}."
+	}
+
+	"Exclude Map Value Error"
+	{
+		"nl"		"Ingevulde waarde moet groter dan 0 zijn."
+	}
+
+	"Extends Left"
+	{
+		"nl"		" Aantal verbruikte verlengingen: {1}/{2} ({3} zijn nog over)"
+	}
+
+	"Clear cooldown usage"
+	{
+		"nl"		"Gebruik: sm_clearcd <map>"
+	}
+
+	"Map not on cooldown"
+	{
+		"nl"		"Map {1} is momenteel weer speelbaar."
+	}
+
+	"Map cooldown cleared"
+	{
+		"nl"		"Wachtijd hersteld voor map {green}{1}"
+	}
+
+	"Nominated by"
+	{
+		"nl"		"Gekozen door:"
+	}
+
+	"Noone"
+	{
+		"nl"		"Niemand"
+	}
+}
+

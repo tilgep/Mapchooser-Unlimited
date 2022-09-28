@@ -1,0 +1,428 @@
+"Phrases"
+{
+	"NPrefix"
+	{
+		"nl"		"{green}[NU]{default}"
+	}
+
+	"Player Nominated"
+	{
+		"nl"		"{lightgreen}{1}{default} heeft gekozen voor {green}{2}"
+	}
+
+	"Player Nominated Replaced"
+	{
+		"nl"		"{lightgreen}{1}{default} heeft zijn keuze veranderd naar {green}{2}"
+	}
+
+	"Player Nominated Single"
+	{
+		"nl"		"{lightgreen}{1}{default} heeft gekozen voor {green}{2}{default} [1 stem]"
+	}
+
+	"Player Nominated Multiple"
+	{
+		"nl"		"{lightgreen}{1}{default} heeft gekozen voor {green} {2}{default} [{3} stemmen]"
+	}
+
+	"Player Nominated Single Replaced"
+	{
+		"nl"		"{lightgreen}{1}{default} heeft zijn keuze veranderd naar {green}{2}{default} [1 stem]"
+	}
+
+	"Player Nominated Multiple Replaced"
+	{
+		"nl"		"{lightgreen}{1}{default} heeft zijn keuze veranderd naar {green}{2}{default} [{3} stemmen]"
+	}
+
+	"Client Nominated Single"
+	{
+		"nl"		"Jij hebt gekozen voor{green}{1}{default} [1 stem]"
+	}
+
+	"Client Nominated Multiple"
+	{
+		"nl"		"Jij hebt gekozen voor{green}{1}{default} [{2} stemmen]"
+	}
+
+	"Client Nominated Single Replaced"
+	{
+		"nl"		"Jij hebt je keuze veranderd naar {green}{1}{default} [1 stem]"
+	}
+
+	"Client Nominated Multiple Replaced"
+	{
+		"nl"		"Jij hebt je keuze veranderd naar {green}{1}{default} [{2} stemmen]"
+	}
+	
+	"Current map"
+	{
+		"nl"		"Je kan niet stemmen voor de huidige map!"
+	}
+
+	"Current nomination"
+	{
+		"nl"		"Je hebt al gekozen voor '{1}'"
+	}
+
+	"Already Inserted"
+	{
+		"nl"		"Een beheerder heeft al  '{1}' geplaatst voor de volgende stemronde!"
+	}
+
+	"Already Nominated"
+	{
+		"nl"		"'{1}' is al door iemand anders gekozen!"
+	}
+
+	"Admin Only Nominating"
+	{
+		"nl"		"'{1}' kan alleen worden gekozen door beheerders!"
+	}
+
+	"Map is on cooldown"
+	{
+		"nl"		"Er kan pas gestemd worden op '{1}' na {2} mappen."
+	}
+
+	"Map is on cooldown - No Value"
+	{
+		"nl"		"'{1}' is recent al gespeeld en kan dus niet worden gekozen."
+	}
+
+	"Map needs more players"
+	{
+		"nl"		"'{1}' heeft nog {2} spelers nodig voordat je het kunt kiezen!"
+	}
+
+	"Map needs fewer players"
+	{
+		"nl"		"'{1}' heeft minder als{2} spelers nodig voordat je het kunt kiezen!!"
+	}
+
+	"Nominate Time Restriction - Hours"
+	{
+		"nl"		"'{1}' kan worden herkozen in {2} uren en {3} minuten."
+	}
+
+	"Nominate Time Restriction - Minutes"
+	{
+		"nl"		"'{1}' worden gekozen in {2} minuten."
+	}
+
+	"Error Nominating"
+	{
+		"nl"		"Er is een fout gemaakt bij het selecteren van '{1}'"
+	}
+
+	"Error Inserting"
+	{
+		"nl"		"Er is een fout gemaakt bij het toevoegen van '{1}'"
+	}
+
+	"Nominate Menu Title"
+	{
+		"nl"		"Selecteer een map voor de stemronde"
+	}
+
+	"Menu Current Map"
+	{
+		"nl"		"[Huidige Map]"
+	}
+
+	"Menu Current Nom"
+	{
+		"nl"		"[Jou Keuze]"
+	}
+
+	"Menu Nominated"
+	{
+		"nl"		"[Gekozen]"
+	}
+
+	"Menu Inserted"
+	{
+		"nl"		"[Toegevoegd]"
+	}
+
+	"Menu Cooldown"
+	{
+		"nl"		"[Wachtijd: {1} mappen]"
+	}
+
+	"Menu Cooldown - No Value"
+	{
+		"nl"		"[Recentelijk Gespeeld]"
+	}
+
+	"Menu Not Enough Players"
+	{
+		"nl"		"[Spelers +{1}]"
+	}
+
+	"Menu Too Many Players"
+	{
+		"nl"		"[Spelers -{1}]"
+	}
+
+	"Menu Time"
+	{
+		"nl"		"[Wacht {1}Uur {2}Min]"
+	}
+
+	"Menu Admin Only"
+	{
+		"nl"		"[Beheerders]"
+	}
+
+	"Menu Group Max"
+	{
+		"nl"		"[Maximale Groepsgrootte: {1}]"
+	}
+
+	"Insert Menu Title"
+	{
+		"nl"		"Select een map die je wil toevoegen"
+	}
+
+	"Map inserted"
+	{
+		"nl"		"{lightgreen}{1}{default} heeft de map {green}{2}{default} voor de volgende stemronde."
+	}
+
+	"Nominating not unlocked"
+	{
+		"nl"		"Je kunt pas stemmen over {1} seconden."
+	}
+
+	"Wait to nominate"
+	{
+		"nl"		"Je moet nog {1} seconden wachten voordat je weer kan stemmen."
+	}
+
+	"Cannot Nominate - Vote Complete"
+	{
+		"nl"		"Er is al gestemd voor de volgende map."
+	}
+
+	"Cannot Nominate - Vote In Progress"
+	{
+		"nl"		"Er is momenteel al een stemronde bezig voor de volgende map. Jij kan helaas nu niet stemmen."
+	}
+
+	"Cannot Nominate - Vote Full"
+	{
+		"nl"		"De stemlijst zit al vol! Je mag niet meer kiezen."
+	}
+
+	"Cannot insert - Vote In Progress"
+	{
+		"nl"		"De stemronde is al bezig. Je kan nu geen map kiezen."
+	}
+
+	"Nomination Removed - UnNominated"
+	{
+		"nl"		"Je hebt de keuze verwijderd van {green}{1}"
+	}
+	
+	"Nomination Removed - Not Enough Players"
+	{
+		"nl"		"Jou keuze voor  {green}{1}{default} is verwijderd omdat er niet genoeg spelers beschikbaar zijn."
+	}
+	
+	"Nomination Removed - Too Many Players"
+	{
+		"nl"		"Jou keuze voor  {green}{1}{default} is verwijderd omdat er teveel spelers zijn."
+	}
+	
+	"Nomination Removed - Time"
+	{
+		"nl"		"Jou keuze voor {green}{1}{default} is verwijderd omdat het momenteel niet toegestaan is."
+	}
+
+	"Unable To Unnominate"
+	{
+		"nl"		"Jij hebt niet gekozen voor een map."
+	}
+	
+	"Unable To Unnominate Admin"
+	{
+		"nl"		"{lightgreen}{1}{default} heeft niet gestemd voor een map."
+	}
+
+	"Nomlist Menu Title"
+	{
+		"nl"		"Geselecteerde Mappen"
+	}
+
+	"Nomlist Menu No Maps"
+	{
+		"nl"		"Geen enkele map is gekozen door anderen"
+	}
+	
+	"Nomlist Menu Inserted"
+	{
+		"nl"		"{1} [Beheerder]"
+	}
+	
+	"Nomlist Menu Single Vote"
+	{
+		"nl"		"{1} [1 stem]"
+	}
+	
+	"Nomlist Menu Multiple Votes"
+	{
+		"nl"		"{1} [{2} stemmen]"
+	}
+	
+	"Nomlist Menu Owner"
+	{
+		"nl"		"{1} [{2}]"
+	}
+	
+	"NombanList Client Not Valid"
+	{
+		"nl"		"Deze speler bestaat niet"
+	}
+
+	"Nominators Menu Title"
+	{
+		"nl"		"{1} stemmers"
+	}
+
+	"NomStatus Menu Title"
+	{
+		"nl"		"Stembeperking voor: {1}"
+	}
+
+	"Menu - Not Nombanned"
+	{
+		"nl"		"Geen Stembeperking"
+	}
+
+	"Menu - Nomban Duration"
+	{
+		"nl"		"Tijd: {1}"
+	}
+
+	"Menu - Nomban end"
+	{
+		"nl"		"Eind Datum: {1}"
+	}
+
+	"Menu - Nomban timeleft"
+	{
+		"nl"		"Tijd over: {1}"
+	}
+
+	"Menu - Nomban Admin"
+	{
+		"nl"		"Beheerder: {1}"
+	}
+
+	"UnInsert Usage"
+	{
+		"nl"		"Gebruik: sm_uninsert <map>"
+	}
+
+	"Map Uninserted"
+	{
+		"nl"		"{lightgreen}{1}{default} heeft {green}{2}{default} verwijderd voor de volgende stemronde."
+	}
+
+	"Failed to uninsert"
+	{
+		"nl"		"Het is niet gelukt om '{1}' te verwijderen van de lijst."
+	}
+
+	"RemoveNom Usage"
+	{
+		"nl"		"Gebruik: sm_removenom <target>"
+	}
+
+	"Nomination Removed - Admin Removed"
+	{
+		"nl"		"Een beheerder heeft jou keuze {green}{1} verwijderd"
+	}
+
+	"Nomban usage"
+	{
+		"nl"		"Gebruik: sm_nomban <target> <duration (in minuten)>"
+	}
+
+	"Already nombanned"
+	{
+		"nl"		"{1} is al verbannen voor stemmen!"
+	}
+
+	"Nombanned permanent"
+	{
+		"nl"		"{1} permanent verbannen voor stemmen."
+	}
+
+	"Nominating Disabled"
+	{
+		"nl"		"Een beheerder heeft het stemmen uitgeschakeld."
+	}
+
+	"Nominating already disabled"
+	{
+		"nl"		"Stemmen is niet mogelijk."
+	}
+
+	"Nominating Enabled"
+	{
+		"nl"		"Een beheerder heeft het stemmen ingeschakeld."
+	}
+
+	"Nominating already enabled"
+	{
+		"nl"		"Stemmen is al mogelijk."
+	}
+
+	"Cannot nominate - Nombanned"
+	{
+		"nl"		"Je kan geen map selected omdat je ervoor verbannen bent. Gebruik{green}!nomstatus{default} voor meer informatie over je ban."
+	}
+
+	"Nombanned"
+	{
+		"nl"		"Heeft {1} verbannen van het stemmen op mappen voor {2} minuten."
+	}
+
+	"Nomination removed on nomban"
+	{
+		"nl"		"Je stem voor de map is verwijderd omdat je ervoor bent verbannen"
+	}
+
+	"UnNomban usage"
+	{
+		"nl"		"Gebruik: sm_unnomban <target>"
+	}
+
+	"Already not nombanned"
+	{
+		"nl"		"{1} heeft geen verbanning voor het stemmen!"
+	}
+
+	"UnNombanned"
+	{
+		"nl"		"Verbanning afgenomen voor {1}"
+	}
+
+	"Menu Got UnNombanned"
+	{
+		"nl"		"Je verbanning voor het stemmen is opgeheven."
+	}
+
+	"Cookies are not cached"
+	{
+		"nl"		"Cookies zijn nog niet geladen. Heb geduld."
+	}
+
+	"Can only use command in game"
+	{
+		"nl"		"Je kunt deze commando alleen in het spel gebruiken."
+	}
+}
+
