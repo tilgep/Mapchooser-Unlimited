@@ -357,7 +357,7 @@
 
 	"Nombanned permanent"
 	{
-		"nl"		"{1} permanent verbannen voor stemmen."
+		"nl"		" {1} permanent verbannen voor stemmen."
 	}
 
 	"Nominating Disabled"

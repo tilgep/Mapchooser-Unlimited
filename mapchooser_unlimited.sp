@@ -5,7 +5,7 @@
 #include <mapchooser_unlimited>
 #include <csgocolors_fix>
 
-#define PLUGIN_VERSION "1.2.0"
+#define PLUGIN_VERSION "1.2.2"
 
 //Rewritten from scratch, but influenced by mapchooser_extended
 public Plugin myinfo =
@@ -257,6 +257,8 @@ public void OnConfigsExecuted()
     g_bCooldownsStepped = false;
 
     LoadNominationMode();
+
+    LoadConfig();
 
     if(g_cv_CooldownMode.IntValue == 0)
     {
