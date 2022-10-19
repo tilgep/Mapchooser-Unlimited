@@ -5,7 +5,7 @@
 #include <mapchooser_unlimited>
 #include <csgocolors_fix>
 
-#define PLUGIN_VERSION "1.2.2"
+#define PLUGIN_VERSION "1.2.3"
 
 //Rewritten from scratch, but influenced by mapchooser_extended
 public Plugin myinfo =
@@ -70,7 +70,6 @@ MapChange g_ChangeTime;
 NominationMode g_NominationMode;
 
 bool g_bWaitingForVote = false;
-bool g_bChangeMapAtRoundEnd = false;
 bool g_bMapChangeInProgress = false;    //Is the map currently changing
 bool g_bWarningInProgress = false;      //Is the warning timer currently showing
 bool g_bVoteEnded = false;              //Has the end of map vote ended
@@ -167,8 +166,6 @@ public void OnPluginStart()
     g_cv_ShowNominators = CreateConVar("mcu_show_nominators", "1", "Whether or not to show who nominated the chosen map when the vote ends. (0=disabled, 1=enabled)", _, true, 0.0, true, 1.0);
     
     AutoExecConfig(true, "mapchooser_unlimited");
-
-    HookEvent("round_end", Event_RoundEnd);
 
     g_fwdNominationRemoved = CreateGlobalForward("OnNominationRemoved", ET_Ignore, Param_Cell, Param_String, Param_Cell);
     g_fwdMapVoteStarted = CreateGlobalForward("OnMapVoteWarningStart", ET_Ignore);
@@ -510,16 +507,6 @@ public void StepCooldowns()
     delete snap;
 
     StoreCooldowns();
-}
-
-public void Event_RoundEnd(Event event, const char[] name, bool db)
-{
-    if(g_bChangeMapAtRoundEnd)
-    {
-        g_bChangeMapAtRoundEnd = false;
-        CreateTimer(2.0, Timer_ChangeMap, INVALID_HANDLE, TIMER_FLAG_NO_MAPCHANGE);
-        g_bMapChangeInProgress = true;
-    }
 }
 
 public Action Command_Mapvote(int client, int args)
@@ -1364,20 +1351,17 @@ public void VoteHandler_VoteMenu(Menu menu,
     }
     else
     {
+        if(StrEqual(map, VOTE_RANDOM))
+        {
+            strcopy(map, sizeof(map), g_sRandomMap);
+        }
+
         if(g_ChangeTime == MapChange_MapEnd)
         {
-            if(StrEqual(map, VOTE_RANDOM))
-            {
-                map = g_sRandomMap;
-            }
             SetNextMap(map);
         }
         else if(g_ChangeTime == MapChange_Instant)
         {
-            if(StrEqual(map, VOTE_RANDOM))
-            {
-                map = g_sRandomMap;
-            }
             Handle data;
             CreateDataTimer(4.0, Timer_ChangeMap, data);
             WritePackString(data, map);
@@ -1385,12 +1369,10 @@ public void VoteHandler_VoteMenu(Menu menu,
         }
         else //MapChange_RoundEnd
         {
-            if(StrEqual(map, VOTE_RANDOM))
-            {
-                map = g_sRandomMap;
-            }
             SetNextMap(map);
-            g_bChangeMapAtRoundEnd = true;
+            ConVar timlimit = FindConVar("mp_timelimit");
+            timlimit.SetInt(1);
+            delete timlimit;
         }
 
         g_bVoteEnded = true;
