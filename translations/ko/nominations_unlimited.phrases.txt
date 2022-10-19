@@ -7,52 +7,52 @@
 
 	"Player Nominated"
 	{
-		"ko"		"{lightgreen}{1}{default}님이 {green}{2}을 추천했습니다"
+		"ko"		"{lightgreen}{1}{default}님이 {green}{2}을 추천했습니다."
 	}
 
 	"Player Nominated Replaced"
 	{
-		"ko"		"{lightgreen}{1}{default}님이 추천 맵을 {green}{2}으로 변경했습니다"
+		"ko"		"{lightgreen}{1}{default}님이 추천 맵을 {green}{2}으로 변경했습니다."
 	}
 
 	"Player Nominated Single"
 	{
-		"ko"		"{lightgreen}{1}{default}님이 {green}{2}{default}을 추천했습니다 [1명 추천]"
+		"ko"		"{lightgreen}{1}{default}님이 {green}{2}{default}을 추천했습니다. [1명 추천]"
 	}
 
 	"Player Nominated Multiple"
 	{
-		"ko"		"{lightgreen}{1}{default}님이 {green} {2}{default}을 추천했습니다 [{3}명 추천]"
+		"ko"		"{lightgreen}{1}{default}님이 {green} {2}{default}을 추천했습니다. [{3}명 추천]"
 	}
 
 	"Player Nominated Single Replaced"
 	{
-		"ko"		"{lightgreen}{1}{default}님이 추천 맵을 {green}{2}{default}으로 변경했습니다 [1명 추천]"
+		"ko"		"{lightgreen}{1}{default}님이 추천 맵을 {green}{2}{default}으로 변경했습니다. [1명 추천]"
 	}
 
 	"Player Nominated Multiple Replaced"
 	{
-		"ko"		"{lightgreen}{1}{default}님이 추천 맵을 {green}{2}{default}으로 변경했습니다 [{3}명 추천]"
+		"ko"		"{lightgreen}{1}{default}님이 추천 맵을 {green}{2}{default}으로 변경했습니다. [{3}명 추천]"
 	}
 
 	"Client Nominated Single"
 	{
-		"ko"		"{green}{1}{default}을 추천했습니다 [1명 추천]"
+		"ko"		"{green}{1}{default}을 추천했습니다. [1명 추천]"
 	}
 
 	"Client Nominated Multiple"
 	{
-		"ko"		"{green}{1}{default}을 추천했습니다 [{2}명 추천]"
+		"ko"		"{green}{1}{default}을 추천했습니다. [{2}명 추천]"
 	}
 
 	"Client Nominated Single Replaced"
 	{
-		"ko"		"추천 맵을 {green}{1}{default}으로 변경했습니다 [1명 추천]"
+		"ko"		"추천 맵을 {green}{1}{default}으로 변경했습니다. [1명 추천]"
 	}
 
 	"Client Nominated Multiple Replaced"
 	{
-		"ko"		"추천 맵을 {green}{1}{default}으로 변경했습니다 [{2}명 추천]"
+		"ko"		"추천 맵을 {green}{1}{default}으로 변경했습니다. [{2}명 추천]"
 	}
 	
 	"Current map"
@@ -112,12 +112,12 @@
 
 	"Error Nominating"
 	{
-		"ko"		"'{1}'을 추천하는데 오류가 발생했습니다"
+		"ko"		"'{1}'을 추천하는데 오류가 발생했습니다."
 	}
 
 	"Error Inserting"
 	{
-		"ko"		"'{1}'을 추가하는데 오류가 발생했습니다"
+		"ko"		"'{1}'을 추가하는데 오류가 발생했습니다."
 	}
 
 	"Nominate Menu Title"
@@ -222,7 +222,7 @@
 
 	"Nomination Removed - UnNominated"
 	{
-		"ko"		"{green}{1}을 더이상 추천하지 않습니다"
+		"ko"		"{green}{1}을 더이상 추천하지 않습니다."
 	}
 	
 	"Nomination Removed - Not Enough Players"
@@ -343,7 +343,7 @@
 
 	"Nomination Removed - Admin Removed"
 	{
-		"ko"		"어드민이 유저의 추천 맵 {green}{1}을 삭제했습니다"
+		"ko"		"어드민이 유저의 추천 맵 {green}{1}을 삭제했습니다."
 	}
 
 	"Nomban usage"
@@ -394,7 +394,7 @@
 
 	"Nomination removed on nomban"
 	{
-		"ko"		"유저의 맵 추천 자격이 제한되었기 때문에 추천한 맵이 삭제되었습니다."
+		"ko"		"유저의 맵 추천 자격이 제한된 이유로 추천한 맵이 삭제되었습니다."
 	}
 
 	"UnNomban usage"
@@ -409,7 +409,7 @@
 
 	"UnNombanned"
 	{
-		"ko"		"{1}님의 맵 추천 자격이 허용됐습니다"
+		"ko"		"{1}님의 맵 추천 자격이 허용됐습니다."
 	}
 
 	"Menu Got UnNombanned"
