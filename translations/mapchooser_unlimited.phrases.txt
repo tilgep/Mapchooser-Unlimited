@@ -190,8 +190,13 @@
 		"en"		"Nominated by:"
 	}
 
-	"Noone"
+	"No One Nominated"
 	{
-		"en"		"Noone"
+		"en"		"The nextmap was not nominated by any player."
+	}
+
+	"Random Nextmap"
+	{
+		"en"		"The nextmap was selected by random."
 	}
 }

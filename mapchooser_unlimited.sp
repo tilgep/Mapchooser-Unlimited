@@ -1246,7 +1246,7 @@ public int Handler_VoteMenu(Menu menu, MenuAction action, int param1, int param2
                 CPrintToChatAll("%t %t", "Prefix", "Vote End - No Votes", map);
                 LogAction(-1, -1, "Map voting finished. No votes received.");
 
-                ShowNominators();
+                ShowNominators(true);
 
                 g_bVoteEnded = true;
                 WipeAllNominations(Removed_VoteEnded);
@@ -1380,7 +1380,7 @@ public void VoteHandler_VoteMenu(Menu menu,
         CPrintToChatAll("%t %t", "Prefix", "Nextmap Voting Finished", map, (float(item_info[0][VOTEINFO_ITEM_VOTES])/float(num_votes)*100), num_votes);
         LogAction(-1, -1, "Voting for next map has finished. Nextmap: %s.", map);
 
-        ShowNominators();
+        ShowNominators(false);
     }
 
     g_bVoteInProgress = false;
@@ -1934,10 +1934,18 @@ void CheckNomRestrictions(bool players = false, bool time = false)
     delete snap;
 }
 
-public void ShowNominators()
+public void ShowNominators(bool random)
 {
     char nextmap[PLATFORM_MAX_PATH];
     if(!GetNextMap(nextmap, sizeof(nextmap))) return;
+    
+    // Different chat message for random map
+    if (random)
+    {
+        if (g_cv_ShowNominators.BoolValue) CPrintToChatAll("%t %t", "Prefix", "Random Nextmap");
+        LogMessage("Winning map was selected by random");
+        return;
+    }
 
     char lognames[512];
     char names[512];
@@ -1954,12 +1962,8 @@ public void ShowNominators()
     
     if(count == 0)
     {
-        Format(names, sizeof(names), "%s", "Noone");
-        Format(lognames, sizeof(lognames), "%s", "Noone");
-
-        if(g_cv_ShowNominators.BoolValue) CPrintToChatAll("%t %t %t", "Prefix", "Nominated by", names);
+        if(g_cv_ShowNominators.BoolValue) CPrintToChatAll("%t %t", "Prefix", "No One Nominated");
         LogMessage("Winning map nominated by: %s", lognames);
-
         return;
     }
 
