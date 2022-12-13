@@ -5,7 +5,7 @@
 #include <mapchooser_unlimited>
 #include <csgocolors_fix>
 
-#define PLUGIN_VERSION "1.2.3"
+#define PLUGIN_VERSION "1.2.4"
 
 //Rewritten from scratch, but influenced by mapchooser_extended
 public Plugin myinfo =
@@ -1269,7 +1269,6 @@ public void VoteHandler_VoteMenu(Menu menu,
                                 const int[][] item_info)    //Array of items, sorted by count.  Use VOTEINFO_ITEM defines
 {
     char map[PLATFORM_MAX_PATH];
-    bool random = false;
 
     /* Check if we need to make a runoff */
     if(g_cv_RunOffCount.IntValue > 0 && num_items > 1 && g_iRunoffCount < g_cv_RunOffCount.IntValue)
@@ -1354,6 +1353,7 @@ public void VoteHandler_VoteMenu(Menu menu,
     }
     else
     {
+        bool random = false;
         if(StrEqual(map, VOTE_RANDOM))
         {
             strcopy(map, sizeof(map), g_sRandomMap);
