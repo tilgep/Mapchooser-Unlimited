@@ -1220,6 +1220,7 @@ public int Handler_VoteMenu(Menu menu, MenuAction action, int param1, int param2
 
                 int item;
                 char map[PLATFORM_MAX_PATH];
+                bool random = false;
                 bool valid;
 
                 do
@@ -1237,6 +1238,7 @@ public int Handler_VoteMenu(Menu menu, MenuAction action, int param1, int param2
                 {
                     Format(map, sizeof(map), "%t", "Random Map");
                     SetNextMap(g_sRandomMap);
+                    random = true;
                 }
                 else
                 {
@@ -1246,7 +1248,7 @@ public int Handler_VoteMenu(Menu menu, MenuAction action, int param1, int param2
                 CPrintToChatAll("%t %t", "Prefix", "Vote End - No Votes", map);
                 LogAction(-1, -1, "Map voting finished. No votes received.");
 
-                ShowNominators();
+                ShowNominators(random);
 
                 g_bVoteEnded = true;
                 WipeAllNominations(Removed_VoteEnded);
@@ -1267,6 +1269,7 @@ public void VoteHandler_VoteMenu(Menu menu,
                                 const int[][] item_info)    //Array of items, sorted by count.  Use VOTEINFO_ITEM defines
 {
     char map[PLATFORM_MAX_PATH];
+    bool random = false;
 
     /* Check if we need to make a runoff */
     if(g_cv_RunOffCount.IntValue > 0 && num_items > 1 && g_iRunoffCount < g_cv_RunOffCount.IntValue)
@@ -1354,6 +1357,7 @@ public void VoteHandler_VoteMenu(Menu menu,
         if(StrEqual(map, VOTE_RANDOM))
         {
             strcopy(map, sizeof(map), g_sRandomMap);
+            random = true;
         }
 
         if(g_ChangeTime == MapChange_MapEnd)
@@ -1380,7 +1384,7 @@ public void VoteHandler_VoteMenu(Menu menu,
         CPrintToChatAll("%t %t", "Prefix", "Nextmap Voting Finished", map, (float(item_info[0][VOTEINFO_ITEM_VOTES])/float(num_votes)*100), num_votes);
         LogAction(-1, -1, "Voting for next map has finished. Nextmap: %s.", map);
 
-        ShowNominators();
+        ShowNominators(random);
     }
 
     g_bVoteInProgress = false;
@@ -1934,10 +1938,18 @@ void CheckNomRestrictions(bool players = false, bool time = false)
     delete snap;
 }
 
-public void ShowNominators()
+public void ShowNominators(bool random)
 {
     char nextmap[PLATFORM_MAX_PATH];
     if(!GetNextMap(nextmap, sizeof(nextmap))) return;
+    
+    // Different chat message for random map
+    if (random)
+    {
+        if (g_cv_ShowNominators.BoolValue) CPrintToChatAll("%t %t", "Prefix", "Random Nextmap");
+        LogMessage("Winning map was selected by random");
+        return;
+    }
 
     char lognames[512];
     char names[512];
@@ -1954,17 +1966,13 @@ public void ShowNominators()
     
     if(count == 0)
     {
-        Format(names, sizeof(names), "%s", "Noone");
-        Format(lognames, sizeof(lognames), "%s", "Noone");
-
-        if(g_cv_ShowNominators.BoolValue) CPrintToChatAll("%t %t %t", "Prefix", "Nominated by", names);
-        LogMessage("Winning map nominated by: %s", lognames);
-
+        if(g_cv_ShowNominators.BoolValue) CPrintToChatAll("%t %t", "Prefix", "No One Nominated");
+        LogMessage("Winning map not nominated by anyone.");
         return;
     }
 
     if(g_cv_ShowNominators.BoolValue) CPrintToChatAll("%t %t %s", "Prefix", "Nominated by", names);
-    LogMessage("Winning map nominated by:%s", lognames);
+    LogMessage("Winning map nominated by: %s", lognames);
 }
 
 /* *********************************************************************** */

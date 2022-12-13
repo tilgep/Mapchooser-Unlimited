@@ -1616,7 +1616,7 @@ public void UnNomBanClient(int client, int admin)
     LogAction(admin, client, "%L unnombanned %L", admin, client);
 
     Menu menu = CreateMenu(NomStatusMenu_Handler);
-    menu.SetTitle("%T", "NomStatus Menu Title", client);
+    menu.SetTitle("%T", "NomStatus Menu Title", client, client);
     menu.AddItem("s", " ", ITEMDRAW_SPACER);
 
     Format(tag, sizeof(tag), "%T", "Menu Got UnNombanned", client);
