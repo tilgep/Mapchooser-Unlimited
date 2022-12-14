@@ -6,7 +6,7 @@
 #include <mapchooser_unlimited>
 #include <csgocolors_fix>
 
-#define PLUGIN_VERSION "1.2.0"
+#define PLUGIN_VERSION "1.2.1"
 
 public Plugin myinfo =
 {
@@ -257,7 +257,9 @@ public Action Command_Nominate(int client, int args)
     }
 
     char map[PLATFORM_MAX_PATH];
-    GetCmdArg(1, map, sizeof(map));
+    GetCmdArgString(map, sizeof(map));
+    ReplaceString(map, sizeof(map), " ", "_", false);
+    StripQuotes(map);
 
     if(StrEqual(map, "_random"))
     {
