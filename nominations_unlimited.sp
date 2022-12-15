@@ -6,7 +6,7 @@
 #include <mapchooser_unlimited>
 #include <csgocolors_fix>
 
-#define PLUGIN_VERSION "1.2.1"
+#define PLUGIN_VERSION "1.2.2"
 
 public Plugin myinfo =
 {
@@ -1385,6 +1385,20 @@ public void PrepareNominatorsMenu(int client, const char[] map)
     char buffer[PLATFORM_MAX_PATH];
     int[] clients = new int[MAXPLAYERS+1];
     int count = GetMapNominators(map, clients, MAXPLAYERS+1);
+    
+    GetClientNomination(client, buffer, sizeof(buffer));
+    bool nominator = StrEqual(buffer, map, false);
+    if (nominator)
+    {
+        Format(buffer, sizeof(buffer), "%T", "Unnominate", client);
+        menu.AddItem(map, buffer);
+    }
+    else
+    {
+        Format(buffer, sizeof(buffer), "%T", "Nominate", client);
+        menu.AddItem(map, buffer);
+    }
+    
     for(int i = 0; i < count; i++)
     {
         Format(buffer, sizeof(buffer), "%N [#%d]", clients[i], GetClientUserId(clients[i]));
@@ -1398,6 +1412,46 @@ public int NominatorsMenu_Handler(Menu menu, MenuAction action, int param1, int 
 {
     switch(action)
     {
+        case MenuAction_Select:
+        {
+            if (param2 == 0)
+            {
+                char buffer[PLATFORM_MAX_PATH], map[PLATFORM_MAX_PATH];
+                GetMenuItem(menu, param2, map, sizeof(map));
+                GetClientNomination(param1, buffer, sizeof(buffer));
+                bool nominator = StrEqual(buffer, map);
+                if (!nominator)
+                {
+                    if (!CanClientNominate(param1)) return 0;
+                    CanNominateResult canNom = CanNominate(param1);
+                    if (canNom != CanNominate_Yes)
+                    {
+                        switch (canNom)
+                        {
+                            case CanNominate_VoteInProgress:
+                            {
+                                CPrintToChat(param1, "%t %t", "NPrefix", "Cannot Nominate - Vote In Progress");
+                            }
+                        }
+                        return 0;
+                    }
+                    int status = CanMapBeNominated(param1, map);
+                    if ((status & CanClientNom_Yes) == CanClientNom_Yes)
+                    {
+                        NominateMap(param1, map, false);
+                        return 0;
+                    }
+                }
+                else
+                {
+                    if (!RemoveNominationByOwner(param1, Removed_UnNominated))
+                    {
+                        CReplyToCommand(param1, "%t %t", "NPrefix", "Unable To Unnominate");
+                        return 0;
+                    }
+                }
+            }
+        }
         case MenuAction_Cancel: 
         {
             if(param2==MenuCancel_ExitBack) PrepareNomlistMenu(param1);
