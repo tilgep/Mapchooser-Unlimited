@@ -1390,12 +1390,12 @@ public void PrepareNominatorsMenu(int client, const char[] map)
     bool nominator = StrEqual(buffer, map, false);
     if (nominator)
     {
-        Format(buffer, sizeof(buffer), "%t", "Unnominate");
+        Format(buffer, sizeof(buffer), "%T", "Unnominate", client);
         menu.AddItem(map, buffer);
     }
     else
     {
-        Format(buffer, sizeof(buffer), "%t", "Nominate");
+        Format(buffer, sizeof(buffer), "%T", "Nominate", client);
         menu.AddItem(map, buffer);
     }
     
