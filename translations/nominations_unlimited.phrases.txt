@@ -536,4 +536,14 @@
 	{
 		"en"		"You can only use this command in game."
 	}
+
+	"Nominate"
+	{
+		"en"		"Nominate"
+	}
+
+	"Unnominate"
+	{
+		"en"		"Unnominate"
+	}
 }
