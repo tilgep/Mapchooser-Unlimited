@@ -1,0 +1,437 @@
+"Phrases"
+{
+	"NPrefix"
+	{
+		"ru"		"{green}[NU]{default}"
+	}
+
+	"Player Nominated"
+	{
+		"ru"		"{lightgreen}{1}{default} номинировал {green}{2}"
+	}
+
+	"Player Nominated Replaced"
+	{
+		"ru"		"{lightgreen}{1}{default} изменил свою номинацию на {green}{2}"
+	}
+
+	"Player Nominated Single"
+	{
+		"ru"		"{lightgreen}{1}{default} номинировал {green}{2}{default} [1 голос]"
+	}
+
+	"Player Nominated Multiple"
+	{
+		"ru"		"{lightgreen}{1}{default} номинировал {green} {2}{default} [{3} голосов]"
+	}
+
+	"Player Nominated Single Replaced"
+	{
+		"ru"		"{lightgreen}{1}{default} изменил свою номинацию на {green}{2}{default} [1 голос]"
+	}
+
+	"Player Nominated Multiple Replaced"
+	{
+		"ru"		"{lightgreen}{1}{default} изменил свою номинацию на {green}{2}{default} [{3} голосов]"
+	}
+
+	"Client Nominated Single"
+	{
+		"ru"		"Вы номинировали {green}{1}{default} [1 голос]"
+	}
+
+	"Client Nominated Multiple"
+	{
+		"ru"		"Вы номинировали {green}{1}{default} [{2} голосов]"
+	}
+
+	"Client Nominated Single Replaced"
+	{
+		"ru"		"Вы изменили свою номинацию на {green}{1}{default} [1 голос]"
+	}
+
+	"Client Nominated Multiple Replaced"
+	{
+		"ru"		"Вы изменили свою номинацию на {green}{1}{default} [{2} голосов]"
+	}
+	
+	"Current map"
+	{
+		"ru"		"Вы не можете номинировать текущую карту!"
+	}
+
+	"Current nomination"
+	{
+		"ru"		"Вы уже номинировали '{1}'"
+	}
+
+	"Already Inserted"
+	{
+		"ru"		"Администратор уже выставил '{1}' на следующее голосование!"
+	}
+
+	"Already Nominated"
+	{
+		"ru"		"'{1}' уже номинирована!"
+	}
+
+	"Admin Only Nominating"
+	{
+		"ru"		"'{1}' может быть номинирована только администрацией!"
+	}
+
+	"Map is on cooldown"
+	{
+		"ru"		"'{1}' может быть номинирована ещё после {2} карт."
+	}
+
+	"Map is on cooldown - No Value"
+	{
+		"ru"		"'{1}' игралась недавно и не может быть номинирована."
+	}
+
+	"Map needs more players"
+	{
+		"ru"		"'{1}' требуется ещё {2} игроков, перед тем, как вы можете её номинировать!"
+	}
+
+	"Map needs fewer players"
+	{
+		"ru"		"'{1}' требуется ещё меньше игроков {2}, перед тем, как вы можете её номинировать!"
+	}
+
+	"Nominate Time Restriction - Hours"
+	{
+		"ru"		"'{1}' может быть номинирована через {2} часов и {3} минут."
+	}
+
+	"Nominate Time Restriction - Minutes"
+	{
+		"ru"		"'{1}' может быть номинирована через {2} минут."
+	}
+
+	"Error Nominating"
+	{
+		"ru"		"Произошла ошибка во время номинации '{1}'"
+	}
+
+	"Error Inserting"
+	{
+		"ru"		"Произошла ошибка во время вставки '{1}'"
+	}
+
+	"Nominate Menu Title"
+	{
+		"ru"		"Выберите карту для номинации"
+	}
+
+	"Menu Current Map"
+	{
+		"ru"		"[Текущая карта]"
+	}
+
+	"Menu Current Nom"
+	{
+		"ru"		"[Ваша номинация]"
+	}
+
+	"Menu Nominated"
+	{
+		"ru"		"[Номинирована]"
+	}
+
+	"Menu Inserted"
+	{
+		"ru"		"[Вставлена]"
+	}
+
+	"Menu Cooldown"
+	{
+		"ru"		"[Восстановление: {1} карт]"
+	}
+
+	"Menu Cooldown - No Value"
+	{
+		"ru"		"[Недавно игралась]"
+	}
+
+	"Menu Not Enough Players"
+	{
+		"ru"		"[Игроков +{1}]"
+	}
+
+	"Menu Too Many Players"
+	{
+		"ru"		"[Игроков -{1}]"
+	}
+
+	"Menu Time"
+	{
+		"ru"		"[Подождите {1}ч {2}м]"
+	}
+
+	"Menu Admin Only"
+	{
+		"ru"		"[Только для администрации]"
+	}
+
+	"Menu Group Max"
+	{
+		"ru"		"[Группа макс.: {1}]"
+	}
+
+	"Insert Menu Title"
+	{
+		"ru"		"Выберите карту для вставки"
+	}
+
+	"Map inserted"
+	{
+		"ru"		"{lightgreen}{1}{default} вставлена {green}{2}{default} в голосование за следующую карту."
+	}
+
+	"Nominating not unlocked"
+	{
+		"ru"		"Номинация будет разблокирована через {1} секунд."
+	}
+
+	"Wait to nominate"
+	{
+		"ru"		"Вам нужно подождать ещё {1} секунд, перед повторной номинацией."
+	}
+
+	"Cannot Nominate - Vote Complete"
+	{
+		"ru"		"Голосование уже состоялось."
+	}
+
+	"Cannot Nominate - Vote In Progress"
+	{
+		"ru"		"Идёт голосование за карту. Вы не можете номинировать карту сейчас."
+	}
+
+	"Cannot Nominate - Vote Full"
+	{
+		"ru"		"Лист номинаций полон! Вы не можете номинировать карту."
+	}
+
+	"Cannot insert - Vote In Progress"
+	{
+		"ru"		"Идёт голосование за карту. Вы не можете вставить карту сейчас."
+	}
+
+	"Nomination Removed - UnNominated"
+	{
+		"ru"		"Вы убрали свою номинацию {green}{1}"
+	}
+	
+	"Nomination Removed - Not Enough Players"
+	{
+		"ru"		"Ваша номинация {green}{1}{default} удалена - недостаточно игроков."
+	}
+	
+	"Nomination Removed - Too Many Players"
+	{
+		"ru"		"Ваша номинация {green}{1}{default} удалена - слишком много игроков."
+	}
+	
+	"Nomination Removed - Time"
+	{
+		"ru"		"Ваша номинация {green}{1}{default} удалена - неразрешённо время."
+	}
+
+	"Unable To Unnominate"
+	{
+		"ru"		"Вы не номинировали карту."
+	}
+	
+	"Unable To Unnominate Admin"
+	{
+		"ru"		"{lightgreen}{1}{default} не номинировал карту."
+	}
+
+	"Nomlist Menu Title"
+	{
+		"ru"		"Номинированные карты"
+	}
+
+	"Nomlist Menu No Maps"
+	{
+		"ru"		"Нет номинированных карт."
+	}
+	
+	"Nomlist Menu Inserted"
+	{
+		"ru"		"{1} [Администратор]"
+	}
+	
+	"Nomlist Menu Single Vote"
+	{
+		"ru"		"{1} [1 голос]"
+	}
+	
+	"Nomlist Menu Multiple Votes"
+	{
+		"ru"		"{1} [{2} голосов]"
+	}
+	
+	"Nomlist Menu Owner"
+	{
+		"ru"		"{1} [{2}]"
+	}
+	
+	"NombanList Client Not Valid"
+	{
+		"ru"		"Текущий клиент больше недоступен."
+	}
+
+	"Nominators Menu Title"
+	{
+		"ru"		"{1} номинанты"
+	}
+
+	"NomStatus Menu Title"
+	{
+		"ru"		"Статус блокировки номинации: {1}"
+	}
+
+	"Menu - Not Nombanned"
+	{
+		"ru"		"Не заблокирована номинация"
+	}
+
+	"Menu - Nomban Duration"
+	{
+		"ru"		"Продолжительность: {1}"
+	}
+
+	"Menu - Nomban end"
+	{
+		"ru"		"Дата окончания: {1}"
+	}
+
+	"Menu - Nomban timeleft"
+	{
+		"ru"		"Осталось времени: {1}"
+	}
+
+	"Menu - Nomban Admin"
+	{
+		"ru"		"Администрато: {1}"
+	}
+
+	"UnInsert Usage"
+	{
+		"ru"		"Использование: sm_uninsert <карта>"
+	}
+
+	"Map Uninserted"
+	{
+		"ru"		"{lightgreen}{1}{default} удалена {green}{2}{default} из голосования за следующую карту."
+	}
+
+	"Failed to uninsert"
+	{
+		"ru"		"Ошибка при удалении '{1}' из списка номинаций."
+	}
+
+	"RemoveNom Usage"
+	{
+		"ru"		"Использование: sm_removenom <цель>"
+	}
+
+	"Nomination Removed - Admin Removed"
+	{
+		"ru"		"Администратор удалил вашу номинацию {green}{1}"
+	}
+
+	"Nomban usage"
+	{
+		"ru"		"Использование: sm_nomban <цель> <продолжительность (в минутах)>"
+	}
+
+	"Already nombanned"
+	{
+		"ru"		"{1} уже заблокирован для номинаций!"
+	}
+
+	"Nombanned permanent"
+	{
+		"ru"		"навсегда заблокировал {1} для номинации карт."
+	}
+
+	"Nominating Disabled"
+	{
+		"ru"		"Администратор заблокировал номинацию."
+	}
+
+	"Nominating already disabled"
+	{
+		"ru"		"Номинация уже заблокирована."
+	}
+
+	"Nominating Enabled"
+	{
+		"ru"		"Администратор разблокировал номинацию."
+	}
+
+	"Nominating already enabled"
+	{
+		"ru"		"Номинация уже разблокирована."
+	}
+
+	"Cannot nominate - Nombanned"
+	{
+		"ru"		"Вы не можете номинировать карту, так как вы заблокированы. Используйте {green}!nomstatus{default} для получения большей информации."
+	}
+
+	"Nombanned"
+	{
+		"ru"		"заблокировал номинацию {1} на {2} минут."
+	}
+
+	"Nomination removed on nomban"
+	{
+		"ru"		"Ваша номинация была удалена, поскольку вас заблокировали."
+	}
+
+	"UnNomban usage"
+	{
+		"ru"		"Использование: sm_unnomban <цель>"
+	}
+
+	"Already not nombanned"
+	{
+		"ru"		"{1} уже разблокирован!"
+	}
+
+	"UnNombanned"
+	{
+		"ru"		"разблокировал номинацию {1}"
+	}
+
+	"Menu Got UnNombanned"
+	{
+		"ru"		"Вы были разблокированы для номинации."
+	}
+
+	"Cookies are not cached"
+	{
+		"ru"		"Файлы cookie ещё не загрузились. Пожалуйста, подождите."
+	}
+
+	"Can only use command in game"
+	{
+		"ru"		"Вы можете использовать эту команду только в игре."
+	}
+
+	"Nominate"
+	{
+		"en"		"Номинировать"
+	}
+
+	"Unnominate"
+	{
+		"en"		"Убрать из номинации"
+	}
+}
