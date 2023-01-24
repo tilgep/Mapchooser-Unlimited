@@ -317,7 +317,7 @@
 
 	"Menu - Nomban Admin"
 	{
-		"ru"		"Администрато: {1}"
+		"ru"		"Администратор: {1}"
 	}
 
 	"UnInsert Usage"
